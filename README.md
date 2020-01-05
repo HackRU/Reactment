@@ -54,3 +54,15 @@ git push origin master/<branch name from email>
 ```
 
 Put in a pull request. Be sure to follow the standard guidelines for pull requests.
+
+## Difficulty Levels
+Every task has a difficulty level assigned to it. We ask that you complete a challenge that accurately represents your knowledge as per the following levels. Every issue is prefixed with a `(x)` where `x` represents the difficulty of the task.
+
+### Level 1
+I am a novice at web development, but I can read code. This means that I know at least 1 programming language, and I am willing to learn a lost more, and have an intent to grow!
+
+### Level 2
+I know web development, but not React specifically. This means that I know HTML and I know why it doesn't qualify as a valid programming language!
+
+### Level 3
+I have experience with web development, and I know React!
