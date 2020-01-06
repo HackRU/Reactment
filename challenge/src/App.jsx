@@ -9,10 +9,10 @@ class App extends Component {
     }
     render() {
         return (
+            console.log("I am rendering successfully!"),
             <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 {strings.greeting}
             </div>
-            console.log("I am rendering successfully!"),
         );
     }
 }
