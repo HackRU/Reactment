@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import strings from "./strings.json";
-
+import Navbar from './components/Navbar'
 class App extends Component {
     state = {}
     constructor(props) {
@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
             <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
-                {strings.greeting}
+                <Navbar fixed={true} items={['Home', 'Sponsors', 'About', 'Contact us']} />
             </div>
         );
     }
