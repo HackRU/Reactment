@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BabyYoda from "./mandalorian/BabyYoda";
 import strings from "./strings.json";
 
 class App extends Component {
@@ -9,9 +10,12 @@ class App extends Component {
     }
     render() {
         return (
-            <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
-                {strings.greeting}
-            </div>
+            <>
+                <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
+                    {strings.greeting}
+                </div>
+                <BabyYoda />
+            </>
         );
     }
 }
