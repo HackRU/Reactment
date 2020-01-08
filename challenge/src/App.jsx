@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BabyYoda from "./mandalorian/BabyYoda";
 import strings from "./strings.json";
 import Fade from 'react-reveal/Fade'
 
@@ -10,17 +11,20 @@ class App extends Component {
     }
     render() {
         return (
-            <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
+            <>
+              <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 <Fade left cascade>
-                    {strings.greeting}
+                  {strings.greeting}
 
-                    <form action="https://github.com/HackRU">
-                        <input type="submit" value="Go to GitHub!" />
-                    </form>
+                  <form action="https://github.com/HackRU">
+                    <input type="submit" value="Go to GitHub!" />
+                  </form>
 
                 </Fade>
 
-            </div>
+              </div>
+              <BabyYoda />
+            </>
         );
     }
 }
