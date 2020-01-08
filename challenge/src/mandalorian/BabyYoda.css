@@ -9,6 +9,11 @@
     transform: translateX(-50%);
 }
 
+.baby-yoda h1, .baby-yoda img:last-child {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .baby-yoda h1 {
     font-family: Impact, sans-serif;
 }
