@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.baby-yoda > div:first-child {
+.baby-yoda > div {
     left: 50%;
     position: absolute;
     text-align: center;
