@@ -16,4 +16,13 @@ class App extends Component {
     }
 }
 
+const sum = (list) => {
+    let result = 0;
+    for (let i = 1; i < list.length; i++) {
+        result += list[i];
+    }
+    return result;
+};
+
 export default App;
+export {sum};
