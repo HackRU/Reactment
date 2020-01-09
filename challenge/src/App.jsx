@@ -10,11 +10,8 @@ class App extends Component {
         console.log("Hello from the constructor!");
     }
     render() {
+        console.log("I am rendering successfully!");
         return (
-            console.log("I am rendering successfully!"),
-            <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
-                {strings.greeting}
-            </div>
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 <Fade left cascade>
