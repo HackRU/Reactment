@@ -1,0 +1,45 @@
+.baby-yoda {
+    position: relative;
+}
+
+.baby-yoda > div {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.baby-yoda h1, .baby-yoda img:last-child {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.baby-yoda h1 {
+    font-family: Impact, sans-serif;
+}
+
+.baby-yoda h1:first-child {
+    margin-bottom: 0;
+}
+
+.baby-yoda h1:last-child {
+    margin-top: 0;
+}
+
+.baby-yoda > div > div {
+    position: relative;
+    width: 20rem;
+}
+
+.baby-yoda img:first-child {
+    border-radius: 30%;
+    width: 100%;
+}
+
+.baby-yoda img:last-child {
+    left: 4.7rem;
+    position: absolute;
+    top: .4rem;
+    transform: rotate(-5deg);
+    width: 60%;
+}
