@@ -10,6 +10,7 @@ class App extends Component {
         console.log("Hello from the constructor!");
     }
     render() {
+        console.log("I am rendering successfully!");
         return (
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
