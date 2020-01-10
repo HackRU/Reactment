@@ -16,7 +16,6 @@ class App extends Component {
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 <Fade left cascade>
-                  {strings.greeting}
 
                   <form action="https://github.com/HackRU">
                     <input type="submit" value="Go to GitHub!" />
@@ -26,6 +25,7 @@ class App extends Component {
                 </Fade>
 
               </div>
+
               <BabyYoda />
             </>
         );
