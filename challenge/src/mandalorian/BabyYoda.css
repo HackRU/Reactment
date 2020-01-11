@@ -29,19 +29,18 @@
 
 .baby-yoda > div > div {
     position: relative;
-    width: 24rem;
-}
-
-.baby-yoda img:first-child {
-    display: block;
-    border-radius: 30%;
-    width: 100%;
+    width: 20rem;
     margin-left: auto;
     margin-right: auto;
 }
 
+.baby-yoda img:first-child {
+    border-radius: 30%;
+    width: 100%;
+}
+
 .baby-yoda img:last-child {
-    left: 5.6rem;
+    left: 4.7rem;
     position: absolute;
     top: .4rem;
     transform: rotate(-5deg);
