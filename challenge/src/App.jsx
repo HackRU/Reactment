@@ -5,9 +5,9 @@ class App extends Component {
     state = {}
     constructor(props) {
         super(props);
-        console.log();
     }
     render() {
+        console.log("Render Method is Working")
         return (
             <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 {strings.greeting}
