@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BabyYoda from "./mandalorian/BabyYoda";
+import NumberLogger from './NumberLogger';
 import strings from "./strings.json";
 import Fade from 'react-reveal/Fade'
 
@@ -9,7 +10,7 @@ class App extends Component {
         super(props);
     }
     render() {
-        console.log("Render Method is Working")
+        console.log("Render Method is Working. Redered successfully! I think?")
         return (
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
@@ -20,6 +21,7 @@ class App extends Component {
                     <input type="submit" value="Go to GitHub!" />
                   </form>
 
+                  <NumberLogger/>
                 </Fade>
 
               </div>
