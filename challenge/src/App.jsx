@@ -8,12 +8,10 @@ class App extends Component {
     state = {}
     constructor(props) {
         super(props);
-        console.log("Hello from the constructor!");
     }
     render() {
-        console.log("I am rendering successfully!");
+        console.log("Render Method is Working. Redered successfully! I think?")
         return (
-            console.log("Redered successfully! I think?"),
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 <Fade left cascade>
