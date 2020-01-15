@@ -13,6 +13,7 @@ class App extends Component {
     render() {
         console.log("I am rendering successfully!");
         return (
+            console.log("Redered successfully! I think?"),
             <>
               <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
                 <Fade left cascade>
