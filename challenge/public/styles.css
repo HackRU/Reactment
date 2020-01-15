@@ -32,4 +32,6 @@ ul li {
 ul li:hover,
 ul li.active {
   background-color:#D8784C ;
+/* old styles    background-color: #cc0033ff;
+>>>>>>> master
 }
