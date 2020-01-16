@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BabyYoda from "./mandalorian/BabyYoda";
 import NumberLogger from './NumberLogger';
 import strings from "./strings.json";
+import Navbar from './components/Navbar'
 import Fade from 'react-reveal/Fade'
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
         console.log("Render Method is Working. Redered successfully! I think?")
         return (
             <>
-              <div style={{ width: "100%", height: "100%", textAlign: "center" }}>
+              <Navbar fixed={true} items={['Home', 'Sponsors', 'About', 'Contact us']} />
+              <div style={{ width: "100%", marginTop: "4rem", textAlign: "center" }}>
                 <Fade left cascade>
                   {strings.greeting}
 
