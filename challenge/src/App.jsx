@@ -4,6 +4,7 @@ import NumberLogger from './NumberLogger';
 import strings from "./strings.json";
 import Navbar from './components/Navbar'
 import Fade from 'react-reveal/Fade'
+import Table from './components/Table'
 
 class App extends Component {
     state = {}
@@ -28,6 +29,7 @@ class App extends Component {
 
               </div>
               <BabyYoda />
+              <Table/>
             </>
         );
     }
