@@ -60,7 +60,7 @@ class App extends Component {
             >
               <img
                 src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -74,7 +74,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -88,7 +88,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -125,7 +125,7 @@ class App extends Component {
             >
               <img
                 src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -139,7 +139,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -153,7 +153,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -191,7 +191,7 @@ class App extends Component {
             >
               <img
                 src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -205,7 +205,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
@@ -219,7 +219,7 @@ class App extends Component {
                 src={
                   "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
                 }
-                alt="picture"
+                alt="RandomizedPicsum"
                 height="20%"
                 width="20%"
                 style={{
