@@ -25,11 +25,11 @@ class App extends Component {
                   </form>
 
                   <NumberLogger/>
+                  <BabyYoda />
+                  <Table/>
                 </Fade>
 
               </div>
-              <BabyYoda />
-              <Table/>
             </>
         );
     }
