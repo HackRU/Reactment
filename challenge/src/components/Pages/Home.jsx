@@ -16,7 +16,7 @@ const Home = (props) => {
                 {strings.greeting}
 
                 <form action="https://github.com/HackRU">
-                  <input type="submit" value="Go to GitHub!" />
+                  <input type="submit" value="Go to HackRU's GitHub!" />
                 </form>
 
                 <NumberLogger />
