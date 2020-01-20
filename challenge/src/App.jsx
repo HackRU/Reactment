@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import BabyYoda from "./mandalorian/BabyYoda";
-import NumberLogger from "./NumberLogger";
-import strings from "./strings.json";
 import Navbar from "./components/Navbar";
-import Fade from "react-reveal/Fade";
+import Home from "./components/Pages/Home";
+import Sponsors from "./components/Pages/Sponsors";
+import About from "./components/Pages/About";
+import Contact from "./components/Pages/Contact";
 
 class App extends Component {
   state = {};
@@ -18,222 +18,23 @@ class App extends Component {
   }
 
   Router(param) {
-    console.log(param.PageRoute);
     switch (param.PageRoute) {
       case 0:
         return (
-          <div>
-            <div
-              style={{ width: "100%", marginTop: "4rem", textAlign: "center" }}
-            >
-              <Fade left cascade>
-                {strings.greeting}
-
-                <form action="https://github.com/HackRU">
-                  <input type="submit" value="Go to GitHub!" />
-                </form>
-
-                <NumberLogger />
-              </Fade>
-            </div>
-            <BabyYoda />
-          </div>
+          <Home />
         );
       case 1:
         return (
-          <div>
-            <h1 style={{ fontSize: 100, color: "#FFC436" }}>
-              <center>Sponsors Page</center>
-            </h1>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-            <div
-              style={{
-                backgroundColor: "#115E7C",
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row"
-              }}
-            >
-              <img
-                src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-            </div>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-          </div>
+          <Sponsors currentpage={param.PageRoute}/>
         );
       case 2:
         return (
-          <div>
-            <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
-              <center>About Page</center>
-            </h1>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-            <div
-              style={{
-                backgroundColor: "#6693AC",
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row"
-              }}
-            >
-              <img
-                src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-            </div>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-          </div>
+          <About currentpage={param.PageRoute}/>
+
         );
       case 3:
         return (
-          <div>
-            {" "}
-            <h1 style={{ fontSize: 100, color: "#F09F70" }}>
-              <center>Contact Page</center>
-            </h1>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-            <div
-              style={{
-                backgroundColor: "#546882",
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row"
-              }}
-            >
-              <img
-                src={"https://picsum.photos/id/" + param.PageRoute * 5 + "/500"}
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 10 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-              <img
-                src={
-                  "https://picsum.photos/id/" + param.PageRoute * 20 + "/500"
-                }
-                alt="RandomizedPicsum"
-                height="20%"
-                width="20%"
-                style={{
-                  marginTop: "5%",
-                  marginBottom: "5%",
-                  marginRight: "5%",
-                  marginLeft: "5%"
-                }}
-              ></img>
-            </div>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-          </div>
+          <Contact currentpage={param.PageRoute} />
         );
       default:
         return <div>An error occured.</div>;
