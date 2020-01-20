@@ -30,3 +30,12 @@ ul li:hover,
 ul li.active {
   background-color:#D8784C ;
 }
+
+.Signs, td, th {
+  border: 1px solid black;
+}
+
+.Signs {
+  margin-left: auto;
+  margin-right: auto;
+}
