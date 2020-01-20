@@ -13,16 +13,21 @@ export default class BabyYoda extends Component {
     }
 
     render() {
+        let inner = document.querySelector('.baby-yoda div');
+        let height = '0px';
+        if (inner) {
+            height = '' + inner.clientHeight + 'px';
+        }
         return (
-            <div className="baby-yoda">
+            <div className="baby-yoda" style={{height}}>
+              <div className="baby-yoda-content">
+                <h1>Touch This</h1>
                 <div>
-                    <h1>Touch This</h1>
-                    <div>
-                        <img src={BabyYodaURI} alt={strings.babyYodaAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
-                        <img src={ThugLifeGlassesURI} alt={strings.thugLifeGlassesAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
-                    </div>
-                    <h1>You Cannot</h1>
+                  <img src={BabyYodaURI} alt={strings.babyYodaAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
+                  <img src={ThugLifeGlassesURI} alt={strings.thugLifeGlassesAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
                 </div>
+                <h1>You Cannot</h1>
+              </div>
             </div>
         );
     }
