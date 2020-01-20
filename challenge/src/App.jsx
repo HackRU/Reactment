@@ -9,7 +9,7 @@ class App extends Component {
   state = {};
   constructor(props) {
     super(props);
-    this.state = { currentPage: 0, currentPageName: "" };
+    this.state = { currentPage: 0, currentPageName: "Home" };
     this.handlePageChange = this.handlePageChange.bind(this);
   }
 
@@ -18,21 +18,21 @@ class App extends Component {
   }
 
   Router(param) {
-    switch (param.PageRoute) {
-      case 0:
+    switch (param.PageName) {
+      case 'Home':
         return (
-          <Home />
+          <Home currentpage={param.PageRoute}/>
         );
-      case 1:
+      case 'Sponsors':
         return (
           <Sponsors currentpage={param.PageRoute}/>
         );
-      case 2:
+      case 'About':
         return (
           <About currentpage={param.PageRoute}/>
 
         );
-      case 3:
+      case 'Contact us':
         return (
           <Contact currentpage={param.PageRoute} />
         );
@@ -53,7 +53,7 @@ class App extends Component {
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
-        <this.Router PageRoute={this.state.currentPage} />
+        <this.Router PageRoute={this.state.currentPage} PageName={this.state.currentPageName}/>
       </>
     );
   }
