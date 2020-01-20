@@ -9,12 +9,12 @@ class App extends Component {
   state = {};
   constructor(props) {
     super(props);
-    this.state = { currentPage: 0 };
+    this.state = { currentPage: 0, currentPageName: "" };
     this.handlePageChange = this.handlePageChange.bind(this);
   }
 
-  handlePageChange(index) {
-    this.setState({ currentPage: index });
+  handlePageChange(index, indexName) {
+    this.setState({ currentPage: index, currentPageName: indexName });
   }
 
   Router(param) {
@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("User has selected page # ", this.state.currentPage);
+    console.log("User has selected page ", this.state.currentPageName);
     //console.log("Render Method is Working. Redered successfully! I think?")
 
     return (

@@ -11,7 +11,7 @@ class Navbar extends Component {
   }
 
   handleClick(index) {
-    this.props.onPageChange(index);
+    this.props.onPageChange(index, this.props.items[index]);
   }
 
   render() {
