@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade'
 import Table from './components/Table'
 
 class App extends Component {
-    state = {}
+    state = {date: new Date()}
     constructor(props) {
         super(props);
     }
@@ -20,6 +20,11 @@ class App extends Component {
                 <Fade left cascade>
                   {strings.greeting}
 
+                  <div>
+                    <p>Great Scott!</p>
+                    <p>{this.state.date.getMonth()+1}|{this.state.date.getFullYear()}</p>
+                  </div>
+                  
                   <form action="https://github.com/HackRU">
                     <input type="submit" value="Go to GitHub!" />
                   </form>
@@ -27,7 +32,7 @@ class App extends Component {
                   <NumberLogger/>
                   <BabyYoda />
                   <Table/>
-                </Fade>
+                  </Fade>  
 
               </div>
             </>
