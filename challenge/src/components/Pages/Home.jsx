@@ -5,6 +5,7 @@ import strings from "../../strings.json";
 import Fade from "react-reveal/Fade";
 import Table from '../Table'
 import GIF from "../Gif"
+import Button from '../Button'
 
 const Home = (props) => {
     return (
@@ -13,6 +14,7 @@ const Home = (props) => {
             <div
               style={{ width: "100%", marginTop: "4rem", textAlign: "center" }}
             >
+              <Button />
               <Fade left cascade>
                 {strings.greeting}
 
