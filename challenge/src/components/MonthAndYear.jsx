@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class SomeInformationForTimeTravelers extends React.Component {
+export default class MonthAndYear extends React.Component {
     render() {
         var date = new Date();
         var year = date.getFullYear();
