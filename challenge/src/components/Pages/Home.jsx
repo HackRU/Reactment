@@ -5,7 +5,7 @@ import strings from "../../strings.json";
 import Fade from "react-reveal/Fade";
 import Table from '../Table'
 import GIF from "../Gif"
-import SomeInformationForTimeTravelers from '../SomeInformationForTimeTravelers';
+import MonthAndYear from '../MonthAndYear';
 
 const Home = (props) => {
     return (
@@ -24,7 +24,7 @@ const Home = (props) => {
                 <NumberLogger />
               </Fade>
             </div>
-              <SomeInformationForTimeTravelers />
+              <MonthAndYear />
               <BabyYoda />
               <Table/>
               <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
