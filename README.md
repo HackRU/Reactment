@@ -15,8 +15,26 @@ Feel free to research and gain background knowledge in any of these technologies
 ## What if I don't know React?
 This is completely OK! React can be a beast to starters! We didn't choose React for this challenge because we expect everyone to know or learn NodeJS and React, but rather because we needed some language and we simply chose React because its hot right now! Know that part of this task tests how well you operate with different technologies.
 
+## What do I do?
+check out the tasks underneath the issues tab, __make sure to assign one to yourself__. perferably you should only do one, but make sure if you do any additional tasks that you assign yorself to them to prevent overlap. feel free to come up with your own ideas too and open an issue or email them to us!
+
+## Difficulty Levels
+Every task has a difficulty level assigned to it. We ask that you complete a challenge that accurately represents your knowledge as per the following levels. Every issue is prefixed with a `(x)` where `x` represents the difficulty of the task.
+
+### Level 1
+I am a novice at web development, but I can read code. This means that I know at least 1 programming language, and I am willing to learn a lost more, and have an intent to grow!
+
+### Level 2
+I know web development, but not React specifically. This means that I know HTML and I know why it doesn't qualify as a valid programming language!
+
+### Level 3
+I have experience with web development, and I know React!
+
 ## Getting Started
 First things first, get rid of those nervous jitters! Take this task as any regular programming task that you have to do either for work or simple fun. Remember that you are contributing to the open source community! No mistake is detrimental here! So make mistakes, but most importantly, have fun doing so!
+
+### 0. Self-assign a task
+__make sure you self asign yourself a task if you are doing one on github__ this just ensures no one else accidently works on the same thing as you. you can also feel free to come up with your own idea and email us or open a new issue.
 
 ### 1. Clone this repository and branch out
 Cloning is easy
@@ -50,19 +68,7 @@ Once you are done, push your code to github
 
 ```bash
 git commit -m <Some random message>
-git push origin master/<branch name from email>
+git push origin <branch name, you can just use your name or github username>
 ```
 
 Put in a pull request. Be sure to follow the standard guidelines for pull requests.
-
-## Difficulty Levels
-Every task has a difficulty level assigned to it. We ask that you complete a challenge that accurately represents your knowledge as per the following levels. Every issue is prefixed with a `(x)` where `x` represents the difficulty of the task.
-
-### Level 1
-I am a novice at web development, but I can read code. This means that I know at least 1 programming language, and I am willing to learn a lost more, and have an intent to grow!
-
-### Level 2
-I know web development, but not React specifically. This means that I know HTML and I know why it doesn't qualify as a valid programming language!
-
-### Level 3
-I have experience with web development, and I know React!
