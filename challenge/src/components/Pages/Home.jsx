@@ -28,9 +28,7 @@ const Home = (props) => {
               <MonthAndYear />
               <BabyYoda />
             </div>
-              {/* <MonthAndYear />
-              <BabyYoda /> */}
-              {/* <Table/> */}
+             
           </div>
         </div>
     )
