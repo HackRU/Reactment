@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BabyYoda from "./mandalorian/BabyYoda";
+import ChatBox from "./chatbox/ChatBox";
 import strings from "./strings.json";
 import Fade from 'react-reveal/Fade'
 
@@ -24,6 +25,7 @@ class App extends Component {
 
               </div>
               <BabyYoda />
+              <ChatBox />
             </>
         );
     }
