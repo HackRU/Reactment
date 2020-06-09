@@ -34,7 +34,7 @@ export default class ChatBox extends Component {
             <div className={styles.container}>
               <span className={styles.title}>ReactMent Help</span>
               <div className={styles.body}>
-                {this.state.messages.map(msg => (<ChatMessage {...msg} />))}
+                {this.state.messages.map((msg, i) => (<ChatMessage key={i} {...msg} />))}
               </div>
               <div className={styles.footer}>
                 <input
