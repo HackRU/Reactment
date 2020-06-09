@@ -21,7 +21,7 @@ const Sponsors = (props) => {
             </div>
             <div
               style={{
-                backgroundColor: "#115E7C",
+                backgroundColor: "green",
                 display: "flex",
                 height: "100%",
                 alignItems: "center",
