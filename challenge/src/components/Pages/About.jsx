@@ -12,18 +12,34 @@ class About extends React.Component {
       }
     }
     snap = () => {
-      var oldStands = this.state.standsVisibility.slice(0, this.state.length/2);
-      var replacedStands = this.state.standsVisibility.slice(this.state.length/2);
-      for(var i = 0; i < replacedStands.length; i++){
-        replacedStands[i] = false;
+      var stands = [...this.state.standsVisibility];
+      for(var i = this.state.length/2; i < stands.length; i++){
+        stands[i] = false;
       }
-      var newStands = oldStands.concat(replacedStands);
       this.setState({
-        standsVisibility: newStands,
+        standsVisibility: stands,
         length: this.state.length/2
       })
     }
     render(){
+      var stands = [
+        {
+          stand: "The World",
+          url: "https://static.jojowiki.com/images/c/cb/TheWorldMangaAv.png"
+        },
+        {
+          stand: "Hermit Purple",
+          url: "https://static.jojowiki.com/images/0/08/HermitPurpleMangaAv.png"
+        },
+        {
+          stand: "Magician's Red",
+          url: "https://static.jojowiki.com/images/7/7c/MagicianRedMangaAv.png"
+        },
+        {
+          stand: "Star Platinum",
+          url: "https://cdn.discordapp.com/attachments/701574644595032104/710625607503052800/StarPlatinumMangaAv.png"
+        }
+      ];
       return (
         <div>
             <div>
@@ -44,22 +60,13 @@ class About extends React.Component {
                 flexWrap: "wrap",
               }}
               >
-              <JojoStand
-                stand={"The World"}
-                isVisible={this.state.standsVisibility[0]}
-              />
-              <JojoStand
-                stand={"Hermit Purple"}
-                isVisible={this.state.standsVisibility[1]}
-              />
-              <JojoStand
-                stand={"Magician's Red"}
-                isVisible={this.state.standsVisibility[2]}
-              />
-              <JojoStand
-                stand={"Star Platinum"}
-                isVisible={this.state.standsVisibility[3]}
-              />                            
+              {stands.map((stand, i) => {
+                return <JojoStand
+                  stand={stand.stand}
+                  url={stand.url}
+                  isVisible={this.state.standsVisibility[i]}
+                />
+              })}                 
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
