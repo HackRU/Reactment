@@ -5,32 +5,22 @@ class About extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        stands: [
-          "The World",
-          "Hermit Purple",
-          "Magician's Red",
-          "Star Platinum"
+        standsVisibility: [
+          true,true,true,true
         ],
+        length: 4
       }
-    }
-    renderStands = () => {
-      const standStyling = {
-        margin: "5%",
-        marginTop: "1%",
-        marginBottom: "0",
-        width: "25%"
-      }
-      return this.state.stands.map( stand => {
-        return (<JojoStand
-          stand={stand}
-          style={standStyling}
-        />)
-      });
     }
     snap = () => {
-      var newStands = this.state.stands.slice(0,this.state.stands.length/2);
+      var oldStands = this.state.standsVisibility.slice(0, this.state.length/2);
+      var replacedStands = this.state.standsVisibility.slice(this.state.length/2);
+      for(var i = 0; i < replacedStands.length; i++){
+        replacedStands[i] = false;
+      }
+      var newStands = oldStands.concat(replacedStands);
       this.setState({
-        stands: newStands
+        standsVisibility: newStands,
+        length: this.state.length/2
       })
     }
     render(){
@@ -54,7 +44,22 @@ class About extends React.Component {
                 flexWrap: "wrap",
               }}
               >
-              {this.renderStands()}
+              <JojoStand
+                stand={"The World"}
+                isVisible={this.state.standsVisibility[0]}
+              />
+              <JojoStand
+                stand={"Hermit Purple"}
+                isVisible={this.state.standsVisibility[1]}
+              />
+              <JojoStand
+                stand={"Magician's Red"}
+                isVisible={this.state.standsVisibility[2]}
+              />
+              <JojoStand
+                stand={"Star Platinum"}
+                isVisible={this.state.standsVisibility[3]}
+              />                            
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
