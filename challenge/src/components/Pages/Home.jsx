@@ -21,6 +21,8 @@ const Home = (props) => {
                   <input type="submit" value="Go to HackRU's GitHub!" />
                 </form>
 
+                <button type="button"> Help Button </button>
+
                 <NumberLogger />
               </Fade>
               <MonthAndYear />
