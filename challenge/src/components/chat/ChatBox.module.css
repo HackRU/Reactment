@@ -9,9 +9,10 @@
     display: flex;
     flex-direction: column;
 
+    background-color: white;
     font-family: sans-serif;
 
-    border: 1px solid #d9d9d9;
+    border: 1px solid black;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -20,7 +21,7 @@
     display: block;
     padding: 8px;
 
-    background-color: black;
+    background-color: #cc0033;
     color: #eee;
     font-size: 18px;
     font-weight: bold;
@@ -41,7 +42,7 @@
     display: flex;
     flex-direction: row;
 
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid black;
 }
 
 .footer input {
@@ -56,7 +57,7 @@
 .footer span {
     padding: 10px 14px;
 
-    background-color: black;
+    background-color: #cc0033;
     color: #eee;
     font-size: 18px;
     font-weight: bold;
