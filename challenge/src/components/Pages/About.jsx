@@ -1,15 +1,40 @@
 import React from 'react'
-import RandomImage from '../RandomImage'
+import JojoStand from '../JojoStand'
 
-const About = (props) => {
-    const page = props.currentpage
-    const pictureStyling = {
-        marginTop: "5%",
-        marginBottom: "5%",
-        marginRight: "5%",
-        marginLeft: "5%"
+class About extends React.Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        stands: [
+          "The World",
+          "Hermit Purple",
+          "Magician's Red",
+          "Star Platinum"
+        ],
+      }
     }
-    return (
+    renderStands = () => {
+      const standStyling = {
+        margin: "5%",
+        marginTop: "1%",
+        marginBottom: "0",
+        width: "25%"
+      }
+      return this.state.stands.map( stand => {
+        return (<JojoStand
+          stand={stand}
+          style={standStyling}
+        />)
+      });
+    }
+    snap = () => {
+      var newStands = this.state.stands.slice(0,this.state.stands.length/2);
+      this.setState({
+        stands: newStands
+      })
+    }
+    render(){
+      return (
         <div>
             <div>
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
@@ -25,29 +50,24 @@ const About = (props) => {
                 height: "100%",
                 alignItems: "center",
                 justifyContent: "center",
-                flexDirection: "row"
+                flexDirection: "row",
+                flexWrap: "wrap",
               }}
               >
-              <RandomImage
-                  page={page * 5}
-                  style={pictureStyling}
-                />
-              <RandomImage
-                  page={page * 9}
-                  style={pictureStyling}
-                />
-              <RandomImage
-                  page={page * 13}
-                  style={pictureStyling}
-                />
-                
+              {this.renderStands()}
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
             </div>
+            <center>
+              <button style={{ margin: "20px", padding:"10px"}} onClick={this.snap}>
+                Thanos Snap
+              </button>
+            </center>
           </div>
         </div>
     )
+  }
 }
 
 export default About
