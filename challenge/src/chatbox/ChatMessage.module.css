@@ -45,10 +45,5 @@
     font-size: 13px;
     font-weight: lighter;
 
-    opacity: 0;
-}
-
-.container:hover .date {
     opacity: 0.3;
-    transition: opacity 0.5s;
 }
