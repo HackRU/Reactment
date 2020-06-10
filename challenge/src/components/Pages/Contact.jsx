@@ -1,5 +1,7 @@
 import React from 'react'
 import RandomImage from '../RandomImage'
+import RandomPhoneNumber from '../RandomPhoneNumber'
+import RandomEmail from '../RandomEmail'
 import ChatBox from '../chat/ChatBox'
 
 const Contact = (props) => {
@@ -16,6 +18,12 @@ const Contact = (props) => {
             <div>
               <h1 style={{ fontSize: 100, color: "#F09F70" }}>
                 <center>Contact Page</center>
+              </h1>
+              <h1 style={{ fontSize: 25, color: "#F09F70" }}>
+	                      <center> <RandomPhoneNumber/> </center>
+              </h1>
+              <h1 style={{ fontSize: 25, color: "#F09F70" }}>
+	                      <center> <RandomEmail/> </center>
               </h1>
               <div style={{ backgroundColor: "whitesmoke" }}>
                 <br />
