@@ -36,6 +36,10 @@ class App extends Component {
         return (
           <Contact currentpage={param.PageRoute} />
         );
+        case 'Fun Facts':
+          return (
+            <FunFacts currentpage={param.PageRoute} />
+          );
       default:
         return <div>An error occured.</div>;
     }
