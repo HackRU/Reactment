@@ -4,6 +4,7 @@ import Home from "./components/Pages/Home";
 import Sponsors from "./components/Pages/Sponsors";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
+import Announcements from "./components/Pages/Announcements";
 
 class App extends Component {
   state = {};
@@ -36,6 +37,10 @@ class App extends Component {
         return (
           <Contact currentpage={param.PageRoute} />
         );
+      case 'Announcements':
+        return(
+          <Announcements currentpage={param.PageRoute} />
+        );
       default:
         return <div>An error occured.</div>;
     }
@@ -49,7 +54,7 @@ class App extends Component {
       <>
         <Navbar
           fixed={true}
-          items={["Home", "Sponsors", "About", "Contact us"]}
+          items={["Home", "Sponsors", "About", "Contact us", "Announcements"]}
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
