@@ -4,7 +4,7 @@ import Home from "./components/Pages/Home";
 import Sponsors from "./components/Pages/Sponsors";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
-import FunFacts from "./components/Pages/FunFacts"
+import FunFacts from "challenge/components/Pages/FunFacts"
 
 class App extends Component {
   state = {};
