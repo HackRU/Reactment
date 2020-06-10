@@ -53,7 +53,7 @@ class App extends Component {
       <>
         <Navbar
           fixed={true}
-          items={["Home", "Sponsors", "About", "Contact us"]}
+          items={["Home", "Sponsors", "About", "Contact us" ,"Fun Facts"]}
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
