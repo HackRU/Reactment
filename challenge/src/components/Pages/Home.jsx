@@ -3,8 +3,8 @@ import BabyYoda from "../../mandalorian/BabyYoda";
 import NumberLogger from "../../NumberLogger";
 import strings from "../../strings.json";
 import Fade from "react-reveal/Fade";
-//import Table from '../Table'
-//import GIF from "../Gif"
+import Table from '../Table'
+import GIF from "../Gif"
 import MonthAndYear from '../MonthAndYear';
 
 const Home = (props) => {
@@ -25,16 +25,17 @@ const Home = (props) => {
 
                 <NumberLogger />
               </Fade>
+            </div>
               <MonthAndYear />
               <BabyYoda />
-            </div>
-<<<<<<< HEAD
-             
-=======
-              {/* <MonthAndYear />
-              <BabyYoda /> */}
-              {/* <Table/> */}
->>>>>>> origin/shambhavir
+              <Table/>
+              <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+              </div>
           </div>
         </div>
     )
