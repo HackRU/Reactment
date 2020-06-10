@@ -2,23 +2,28 @@ import React, {Component} from 'react';
 import styles from './AnnouncementComponent.module.css';
 
 export default class AnnouncementList extends Component {
-    state = {announcements: []}
+    state = {announcements: [], loading: true}
 
     async componentDidMount() {
         const response = await fetch('https://api.hackru.org/prod/dayof-slack')
         const json = await response.json();
         this.setState({
-            announcements: json.body
+            loading: false,
+            announcements: json.body.map(a => ({
+                ...a,
+                ts: new Date(parseFloat(a.ts) * 1000).toLocaleTimeString()
+            }))
         });
     }
 
     render () {
-        const { announcements } = this.state;
+        const { announcements , loading} = this.state;
         return (
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-                {announcements.map((announcement, i) => (
+            <div className = {styles.container}>
+                {loading ? (<p>Loading...</p>) : 
+                announcements.map((announcement, i) => (
                     <p key={i}>
-                        {announcement.text}
+                        {announcement.ts}  {announcement.text}
                     </p>
                 ))}
             </div>
