@@ -4,7 +4,7 @@ import Home from "./components/Pages/Home";
 import Sponsors from "./components/Pages/Sponsors";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
-//import FunFacts from "./components/Pages/FunFacts";
+import FunFacts from "./components/FunFacts";
 
 class App extends Component {
   state = {};
@@ -37,10 +37,10 @@ class App extends Component {
         return (
           <Contact currentpage={param.PageRoute} />
         );
-        // case 'Fun Facts':
-        //   return (
-        //     <FunFacts currentpage={param.PageRoute} />
-        //   );
+        case 'Fun Facts':
+          return (
+            <FunFacts currentpage={param.PageRoute} />
+          );
       default:
         return <div>An error occured.</div>;
     }
