@@ -17,8 +17,8 @@ const FunFacts = (props) => {
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
-            
-           
+
+
             <div
               style={{
                 //backgroundColor: "#6693AC",
@@ -41,7 +41,7 @@ const FunFacts = (props) => {
                   page={page * 13}
                   style={pictureStyling}
                 /> */}
-                {/* { 
+                {/* {
                   <Table/>
                 } */}
                 {/* <div>
@@ -51,14 +51,14 @@ const FunFacts = (props) => {
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 </div> */}
-                
+
             </div>
 
-           
+
           </div>
         </div>
    // )
-    
+
 //}
 
 
@@ -71,7 +71,7 @@ const FunFacts = (props) => {
 
 // render () {
 //   return (
-    
+
 
 //       <table className = 'Signs'>
 //       <tr>
@@ -126,5 +126,5 @@ const FunFacts = (props) => {
 }
 
 // //export default About
-// export default Table; 
-export default FunFacts; 
+// export default Table;
+export default FunFacts;
