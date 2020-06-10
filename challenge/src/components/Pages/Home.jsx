@@ -28,7 +28,13 @@ const Home = (props) => {
               <MonthAndYear />
               <BabyYoda />
             </div>
+<<<<<<< HEAD
              
+=======
+              {/* <MonthAndYear />
+              <BabyYoda /> */}
+              {/* <Table/> */}
+>>>>>>> origin/shambhavir
           </div>
         </div>
     )

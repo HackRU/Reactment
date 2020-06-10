@@ -1,12 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import JojoStand from '../JojoStand'
 =======
+=======
+>>>>>>> origin/shambhavir
 //import React from 'react'
 import RandomImage from '../RandomImage'
 import React, { Component } from 'react'
 import GIF from "../Gif"
 import Table from '../Table'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/shambhavir
 
 >>>>>>> fixed issue 45
 
@@ -60,12 +67,17 @@ class About extends React.Component {
             <div
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 backgroundColor: "green",
                 display: "flex",
 =======
                 //backgroundColor: "#6693AC",
                 //display: "flex",
 >>>>>>> fixed issue 45
+=======
+                //backgroundColor: "#6693AC",
+                //display: "flex",
+>>>>>>> origin/shambhavir
                 height: "100%",
                 alignItems: "center",
                 justifyContent: "center",
@@ -73,6 +85,7 @@ class About extends React.Component {
                 flexWrap: "wrap",
               }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
               {stands.map((stand, i) => {
                 return <JojoStand
@@ -95,6 +108,8 @@ class About extends React.Component {
     )
   }
 =======
+=======
+>>>>>>> origin/shambhavir
               {/* <RandomImage
                   page={page * 5}
                   style={pictureStyling}
@@ -134,7 +149,10 @@ class About extends React.Component {
         </div>
     )
     
+<<<<<<< HEAD
 >>>>>>> fixed issue 45
+=======
+>>>>>>> origin/shambhavir
 }
 
 
