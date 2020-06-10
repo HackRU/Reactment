@@ -1,5 +1,6 @@
 import React from 'react'
 import RandomImage from '../RandomImage'
+import ChatBox from '../chat/ChatBox'
 
 const Contact = (props) => {
     const page = props.currentpage
@@ -10,43 +11,46 @@ const Contact = (props) => {
         marginLeft: "5%"
     }
     return (
-        <div>
+        <>
+          <div>
             <div>
-            <h1 style={{ fontSize: 100, color: "#F09F70" }}>
-              <center>Contact Page</center>
-            </h1>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
-            </div>
-            <div
-              style={{
-                backgroundColor: "#546882",
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row"
-              }}
-            >
-              <RandomImage
-                page={page * 4}
-                style={pictureStyling}
-              />
-              <RandomImage
-                page={page * 8}
-                style={pictureStyling}
-              />
+              <h1 style={{ fontSize: 100, color: "#F09F70" }}>
+                <center>Contact Page</center>
+              </h1>
+              <div style={{ backgroundColor: "whitesmoke" }}>
+                <br />
+              </div>
+              <div
+                style={{
+                    backgroundColor: "#546882",
+                    display: "flex",
+                    height: "100%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "row"
+                }}
+              >
                 <RandomImage
-                page={page * 12}
-                style={pictureStyling}
-              />
+                  page={page * 4}
+                  style={pictureStyling}
+                />
+                <RandomImage
+                  page={page * 8}
+                  style={pictureStyling}
+                />
+                <RandomImage
+                  page={page * 12}
+                  style={pictureStyling}
+                />
 
-            </div>
-            <div style={{ backgroundColor: "whitesmoke" }}>
-              <br />
+              </div>
+              <div style={{ backgroundColor: "whitesmoke" }}>
+                <br />
+              </div>
             </div>
           </div>
-        </div>
+          <ChatBox />
+        </>
     )
 }
 

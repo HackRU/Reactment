@@ -51,7 +51,7 @@ class About extends React.Component {
             </div>
             <div
               style={{
-                backgroundColor: "#6693AC",
+                backgroundColor: "green",
                 display: "flex",
                 height: "100%",
                 alignItems: "center",
