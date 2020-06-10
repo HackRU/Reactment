@@ -19,7 +19,7 @@ export default class AnnouncementList extends Component {
     render () {
         const { announcements , loading} = this.state;
         return (
-            <div className = {styles.container}>
+            <div className = {styles.announcementContainer}>
                 {loading ? (<p>Loading...</p>) : 
                 announcements.map((announcement, i) => (
                     <p key={i}>

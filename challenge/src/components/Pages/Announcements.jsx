@@ -1,6 +1,7 @@
 import React from 'react'
 import AnnouncementList from '../announce/AnnouncementComponent'
 
+
 const Announcements = (props) => {
     return (
         <>

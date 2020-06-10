@@ -1,8 +1,8 @@
-.container {
+.announcementContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 60vh;
     overflow: hidden;
     overflow-y: scroll;
     background-color: pink;
