@@ -1,5 +1,7 @@
 import React from 'react'
 import RandomImage from '../RandomImage'
+import Table from '../Table'
+import GIF from "../Gif"
 
 const About = (props) => {
     const page = props.currentpage
@@ -20,7 +22,7 @@ const About = (props) => {
             </div>
             <div
               style={{
-                backgroundColor: "#6693AC",
+                backgroundColor: "#00ff00",
                 display: "flex",
                 height: "100%",
                 alignItems: "center",
@@ -45,6 +47,14 @@ const About = (props) => {
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
             </div>
+            <Table/>
+              <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
+              </div>
           </div>
         </div>
     )

@@ -8,6 +8,7 @@ export default class MonthAndYear extends React.Component {
 
         return (
             <h1 style={{textAlign: "center"}}>It is {month} {year}</h1>
+            
         )
     }
 }
