@@ -1,5 +1,6 @@
 import React from 'react'
 import RandomImage from '../RandomImage'
+import SponsorForm from '../SponsorForm'
 
 const Sponsors = (props) => {
     const page = props.currentpage
@@ -40,7 +41,19 @@ const Sponsors = (props) => {
                   page={page * 24}
                   style={pictureStyling}
                 />
-                
+
+            </div>
+            <div
+              style={{
+                backgroundColor: "#115E7C",
+                display: "flex",
+                height: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "row"
+              }}
+            >
+              <SponsorForm/>
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />

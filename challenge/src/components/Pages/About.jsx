@@ -2,16 +2,48 @@ import React from 'react'
 import RandomImage from '../RandomImage'
 import Table from '../Table'
 import GIF from "../Gif"
+import JojoStand from "../JojoStand"
 
-const About = (props) => {
-    const page = props.currentpage
-    const pictureStyling = {
-        marginTop: "5%",
-        marginBottom: "5%",
-        marginRight: "5%",
-        marginLeft: "5%"
+class About extends React.Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        standsVisibility: [
+          true,true,true,true
+        ],
+        length: 4
+      }
     }
-    return (
+    snap = () => {
+      var stands = [...this.state.standsVisibility];
+      for(var i = this.state.length/2; i < stands.length; i++){
+        stands[i] = false;
+      }
+      this.setState({
+        standsVisibility: stands,
+        length: this.state.length/2
+      })
+    }
+    render(){
+      var stands = [
+        {
+          stand: "The World",
+          url: "https://static.jojowiki.com/images/c/cb/TheWorldMangaAv.png"
+        },
+        {
+          stand: "Hermit Purple",
+          url: "https://static.jojowiki.com/images/0/08/HermitPurpleMangaAv.png"
+        },
+        {
+          stand: "Magician's Red",
+          url: "https://static.jojowiki.com/images/7/7c/MagicianRedMangaAv.png"
+        },
+        {
+          stand: "Star Platinum",
+          url: "https://cdn.discordapp.com/attachments/701574644595032104/710625607503052800/StarPlatinumMangaAv.png"
+        }
+      ];
+      return (
         <div>
             <div>
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
@@ -27,22 +59,17 @@ const About = (props) => {
                 height: "100%",
                 alignItems: "center",
                 justifyContent: "center",
-                flexDirection: "row"
+                flexDirection: "row",
+                flexWrap: "wrap",
               }}
               >
-              <RandomImage
-                  page={page * 5}
-                  style={pictureStyling}
+              {stands.map((stand, i) => {
+                return <JojoStand
+                  stand={stand.stand}
+                  url={stand.url}
+                  isVisible={this.state.standsVisibility[i]}
                 />
-              <RandomImage
-                  page={page * 9}
-                  style={pictureStyling}
-                />
-              <RandomImage
-                  page={page * 13}
-                  style={pictureStyling}
-                />
-                
+              })}                 
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
@@ -58,6 +85,7 @@ const About = (props) => {
           </div>
         </div>
     )
+  }
 }
 
 export default About

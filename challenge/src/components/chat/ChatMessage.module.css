@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    padding: 15px 10px;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 100%;
+    background-color: #cc0033;
+}
+
+.badge span {
+    font-size: 0;
+    color: #eee;
+}
+
+.badge span:first-letter {
+    font-size: 18px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.from {
+    font-weight: bold;
+}
+
+.date {
+    font-size: 13px;
+    font-weight: lighter;
+
+    opacity: 0.3;
+}
