@@ -1,0 +1,30 @@
+# Some important stuff
+# Most files are covered by `challenge/.gitignore`
+*.log
+
+# Slightly less useful gitignores
+
+# In case anyone was having any ideas
+*.html.exe
+*.css.exe
+*.js.exe
+*.html.sh
+*.css.sh
+*.js.sh
+
+# In case anyone had worse plans for this project
+*.php
+
+# We better not need this
+*.pyc
+/__pycache__
+
+# Why not add some Java to this repo?
+*.class
+.gradle
+
+# Just in case
+*.notjs
+*.reallynotjs
+badmeme.gif
+badmeme.gif.exe
