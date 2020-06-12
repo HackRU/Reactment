@@ -4,6 +4,7 @@ import Home from "./components/Pages/Home";
 import Sponsors from "./components/Pages/Sponsors";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
+import FunFacts from "./components/Pages/FunFacts";
 import Announcements from "./components/Pages/Announcements";
 
 class App extends Component {
@@ -37,6 +38,10 @@ class App extends Component {
         return (
           <Contact currentpage={param.PageRoute} />
         );
+        case 'Fun Facts':
+          return (
+            <FunFacts currentpage={param.PageRoute} />
+          );
       case 'Announcements':
         return(
           <Announcements currentpage={param.PageRoute} />
@@ -54,7 +59,7 @@ class App extends Component {
       <>
         <Navbar
           fixed={true}
-          items={["Home", "Sponsors", "About", "Contact us", "Announcements"]}
+          items={["Home", "Sponsors", "About", "Contact us", "Announcements", "Fun Facts"]}
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
