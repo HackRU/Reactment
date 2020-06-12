@@ -1,9 +1,6 @@
 import React from 'react'
- import GIF from "../Gif"
+import GIF from "../Gif"
 import Table from '../Table'
-
-
-
 const FunFacts = (props) => {
    
     return (
@@ -12,29 +9,7 @@ const FunFacts = (props) => {
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
-
-
-            
-          
-              
-              {/* <RandomImage
-                  page={page * 5}
-                  style={pictureStyling}
-                />
-              <RandomImage
-                  page={page * 9}
-                  style={pictureStyling}
-                />
-              <RandomImage
-                  page={page * 13}
-                  style={pictureStyling}
-                /> */}
-              
-            
-                
                   <Table/>
-                
-               
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
@@ -42,15 +17,8 @@ const FunFacts = (props) => {
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                
                 }  
-          
-
-
-          
         </div>
 
     )
               }
-
-
-
 export default FunFacts
