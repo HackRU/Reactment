@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import HackRUlogoURI from "./images/HackRUlogo.jpg";
+import Fade from "react-reveal/Fade";
 
 class Navbar extends Component {
   constructor(props) {
@@ -20,6 +22,9 @@ class Navbar extends Component {
 
     return (
       <div className={this.props.fixed && "fixed"}>
+      <Fade left cascade>
+        <img width='130' height='59' src={HackRUlogoURI} style={{float:"left"}}/>
+      </Fade>
         <ul>
           {this.props.items.map(function(element, index) {
             var style = "";
