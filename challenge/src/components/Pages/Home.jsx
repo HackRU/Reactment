@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 import Table from '../Table'
 import GIF from "../Gif"
 import MonthAndYear from '../MonthAndYear';
+import Counter from "../Counter";
 
 const Home = (props) => {
     return (
@@ -25,6 +26,10 @@ const Home = (props) => {
 
                 <NumberLogger />
               </Fade>
+              <div>
+                <Counter />
+              </div>
+              
             </div>
               <MonthAndYear />
               <BabyYoda />
