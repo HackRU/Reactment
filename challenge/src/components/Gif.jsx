@@ -7,7 +7,7 @@ class GIF extends Component {
     }
 render () {
     return (
-        <img style={{margin: "0 1% 0 1%"}} src={this.props.gifsrc}></img>
+        <img style={{margin: "0 1% 0 1%"}} src={"https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"}></img>
     );
 }
 }

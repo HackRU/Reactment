@@ -6,6 +6,8 @@ import Fade from "react-reveal/Fade";
 import Table from '../Table'
 import GIF from "../Gif"
 import MonthAndYear from '../MonthAndYear';
+import Counter from "../Counter";
+import KrabbyPatty from "../KrabbyPatty"
 
 const Home = (props) => {
     return (
@@ -25,17 +27,22 @@ const Home = (props) => {
 
                 <NumberLogger />
               </Fade>
+              <div>
+                <Counter />
+              </div>
+              
             </div>
               <MonthAndYear />
               <BabyYoda />
-              <Table/>
-              <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
+              {/* <Table/> */}
+              {/* <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-              </div>
+              </div> */}
+              <KrabbyPatty />
           </div>
         </div>
     )
