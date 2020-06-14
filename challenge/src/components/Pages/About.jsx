@@ -13,22 +13,20 @@ class About extends React.Component {
   }
   snap = () => {
     var stands = [...this.state.standsVisibility];
-    // console.log(stands);
 
-    // Select a random number of images to disappear from 1 to the number of images that are present
-    var RandomNumber = Math.floor(Math.random() * this.state.length) + 1;
-    // console.log(RandomNumber);
+    for (var i = 0; i < this.state.length / 2; i++) {
 
-    for (var i = 0; i < RandomNumber; i++) {
+      //Randomly select which is disintegrated 
       var RandomNum = Math.floor(Math.random() * 4);
-      // console.log("disappear: ", RandomNum);
-      if (this.state.length == 0) {
+      //console.log("disappear: ", RandomNum);
+
+      if (this.state.length <= 1) {
         break;
       }
       else if (stands[RandomNum] == true) {
         stands[RandomNum] = false;
 
-        // If Star Platinum disentegrated then display Unbalanced! on the console
+        // If Star Platinum disintegrated then display Unbalanced! on the console
         if (RandomNum == 3) {
           console.log("Unbalanced!");
         }
@@ -39,7 +37,7 @@ class About extends React.Component {
     }
     this.setState({
       standsVisibility: stands,
-      length: this.state.length - RandomNumber
+      length: this.state.length / 2
     })
   }
 
