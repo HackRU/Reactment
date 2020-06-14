@@ -7,6 +7,7 @@ import Table from '../Table'
 import GIF from "../Gif"
 import MonthAndYear from '../MonthAndYear';
 import Counter from "../Counter";
+import KrabbyPatty from "../KrabbyPatty"
 
 const Home = (props) => {
     return (
@@ -41,6 +42,7 @@ const Home = (props) => {
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                 <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
               </div> */}
+              <KrabbyPatty />
           </div>
         </div>
     )
