@@ -18,6 +18,17 @@ const Sponsors = (props) => {
             </h1>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
+              <div
+              style={{
+                backgroundColor: "#115E7C",
+                display: "flex",
+                height: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "row"
+              }}
+            >
+              <SponsorForm/>
             </div>
             <div
               style={{
@@ -43,17 +54,6 @@ const Sponsors = (props) => {
                 />
 
             </div>
-            <div
-              style={{
-                backgroundColor: "#115E7C",
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row"
-              }}
-            >
-              <SponsorForm/>
             </div>
             <div style={{ backgroundColor: "whitesmoke" }}>
               <br />
