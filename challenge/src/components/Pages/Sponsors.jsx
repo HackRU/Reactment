@@ -1,6 +1,7 @@
 import React from 'react'
 import RandomImage from '../RandomImage'
 import SponsorForm from '../SponsorForm'
+import RandomAds from "../RandomAds";
 
 const Sponsors = (props) => {
     const page = props.currentpage
@@ -12,6 +13,7 @@ const Sponsors = (props) => {
   }
     return (
         <div>
+            <RandomAds />
           <div>
             <h1 style={{ fontSize: 100, color: "#FFC436" }}>
               <center>Sponsors Page</center>

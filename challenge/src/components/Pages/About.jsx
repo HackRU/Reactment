@@ -1,5 +1,6 @@
 import React from 'react'
 import JojoStand from '../JojoStand'
+import RandomAds from "../RandomAds";
 
 class About extends React.Component {
   constructor(props) {
@@ -61,7 +62,9 @@ class About extends React.Component {
       }
     ];
     return (
-      <div>
+        <div>
+
+            <RandomAds />
         <div>
           <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
             <center>About Page</center>

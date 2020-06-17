@@ -1,11 +1,14 @@
 import React from 'react'
 import AnnouncementList from '../announce/AnnouncementComponent'
+import RandomAds from "../RandomAds";
 
 
 const Announcements = (props) => {
     return (
         <>
-          <div>
+            <div>
+
+                <RandomAds />
             <div>
               <h1 style={{ fontSize: 100, color: "#F09F70" }}>
                 <center>Announcements Page</center>

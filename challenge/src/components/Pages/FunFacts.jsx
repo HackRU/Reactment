@@ -1,11 +1,12 @@
 import React from 'react'
 import GIF from "../Gif"
 import Table from '../Table'
+import RandomAds from "../RandomAds";
 const FunFacts = (props) => {
    
     return (
         <div>
-            
+            <RandomAds />
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
