@@ -7,7 +7,9 @@ import Table from '../Table'
 import GIF from "../Gif"
 import MonthAndYear from '../MonthAndYear';
 import Counter from "../Counter";
-import KrabbyPatty from "../KrabbyPatty"
+import KrabbyPatty from "../KrabbyPatty";
+import RandomAds from "../RandomAds";
+
 
 const Home = (props) => {
     return (
@@ -24,27 +26,21 @@ const Home = (props) => {
                 </form>
 
                 <button type="button"> Help Button </button>
-
                 <NumberLogger />
               </Fade>
               <div>
                 <Counter />
               </div>
-              
+                </div>
+                <RandomAds />
+                <MonthAndYear />
+                <BabyYoda />
+                <KrabbyPatty />
             </div>
-              <MonthAndYear />
-              <BabyYoda />
-              {/* <Table/> */}
-              {/* <div style={{marginTop: "1%", marginBottom: "1%", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-              </div> */}
-              <KrabbyPatty />
-          </div>
+
+
         </div>
+
     )
 }
 

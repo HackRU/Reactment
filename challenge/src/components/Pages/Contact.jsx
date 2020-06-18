@@ -3,6 +3,7 @@ import RandomImage from '../RandomImage'
 import RandomPhoneNumber from '../RandomPhoneNumber'
 import RandomEmail from '../RandomEmail'
 import ChatBox from '../chat/ChatBox'
+import RandomAds from "../RandomAds";
 
 const Contact = (props) => {
     const page = props.currentpage
@@ -14,7 +15,8 @@ const Contact = (props) => {
     }
     return (
         <>
-          <div>
+            <div>
+                <RandomAds />
             <div>
               <h1 style={{ fontSize: 100, color: "#F09F70" }}>
                 <center>Contact Page</center>
