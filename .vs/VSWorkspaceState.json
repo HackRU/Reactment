@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\challenge",
+    "\\challenge\\public",
+    "\\challenge\\src",
+    "\\challenge\\src\\components",
+    "\\challenge\\src\\components\\Ads",
+    "\\challenge\\src\\components\\Ads\\images",
+    "\\challenge\\src\\components\\announce",
+    "\\challenge\\src\\components\\chat",
+    "\\challenge\\src\\mandalorian"
+  ],
+  "SelectedNode": "\\challenge\\src\\components\\RandomAds.jsx",
+  "PreviewInSolutionExplorer": false
+}
