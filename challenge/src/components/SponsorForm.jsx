@@ -22,22 +22,25 @@ class SponsorForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div
         style={{
+          color: "white",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "row"
+          
         }}>
         DONATE NOW:
         </div>
         <div
         style={{
+          color: "white",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "row"
         }}>
           <label>Name:</label>
-          <input type="text" name="name" onChange={this.handleChange} />
+          <input type="text" name="name" onChange={this.handleChange}/>
         <label>Amount:</label>
         <input type="number" name="amount" onChange={this.handleChange} />
         </div>
