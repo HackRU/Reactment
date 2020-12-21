@@ -53,7 +53,7 @@ git commit -m <some random message>
 git push origin <branch name, you can just use your name or github username>
 ```
 
-Put in a pull request from you [forked](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) instance to our main repository under the hackru organization. Be sure to follow the standard guidelines for pull requests.
+Put in a pull request from your [forked](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) instance to our main repository under the hackru organization. Be sure to follow the standard guidelines for pull requests.
 
 ## Task Difficulty Levels
 Every task has a difficulty level assigned to it. We ask that you complete a challenge that accurately represents your knowledge as per the following levels. Every issue is prefixed with a `(x)` where `x` represents the difficulty of the task.
