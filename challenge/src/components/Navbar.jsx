@@ -23,7 +23,9 @@ class Navbar extends Component {
     return (
       <div className={this.props.fixed && "fixed"}>
       <Fade left cascade>
-        <img width='130' height='59' src={HackRUlogoURI} style={{float:"left"}}/>
+        <a href="https://hackru.org/">
+          <img width='130' height='59' src={HackRUlogoURI} style={{float:"left"}}/>
+        </a>
       </Fade>
         <ul>
           {this.props.items.map(function(element, index) {
