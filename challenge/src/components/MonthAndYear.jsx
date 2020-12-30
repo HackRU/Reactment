@@ -10,7 +10,7 @@ export default class MonthAndYear extends React.Component {
         var result = Math.round((fallSemester.getTime() - currentDate.getTime()) / (one_day)); 
         if(result > 0){
             return result + " days until Fall 2020 Begins!";
-        }else if(result == 0){
+        }else if(result === 0){
             return "Semester has begun";
         }else if(result < 0){
             return "Semester In Progress";
