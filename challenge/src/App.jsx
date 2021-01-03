@@ -6,6 +6,15 @@ import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import FunFacts from "./components/Pages/FunFacts";
 import Announcements from "./components/Pages/Announcements";
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
+import yellow from '@material-ui/core/colors/yellow';
+const theme = createMuiTheme({
+  palette: {
+    primary: green,
+    secondary: yellow
+  }
+})
 
 class App extends Component {
   state = {};
@@ -56,7 +65,8 @@ class App extends Component {
     //console.log("Render Method is Working. Redered successfully! I think?")
 
     return (
-      <>
+
+      <MuiThemeProvider theme={theme}>
         <Navbar
           fixed={true}
           items={["Home", "Sponsors", "About", "Contact us", "Announcements", "Fun Facts"]}
@@ -64,7 +74,7 @@ class App extends Component {
           currentPage={this.state.currentPage}
         />
         <this.Router PageRoute={this.state.currentPage} PageName={this.state.currentPageName}/>
-      </>
+      </MuiThemeProvider>
     );
   }
 }
