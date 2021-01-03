@@ -1,7 +1,9 @@
 import React from 'react'
 import GIF from "../Gif"
 import Table from '../Table'
-import RandomAds from "../RandomAds";
+import RandomAds from "../RandomAds"
+import Jokes from '../Jokes';
+
 const FunFacts = (props) => {
    
     return (
@@ -10,7 +12,9 @@ const FunFacts = (props) => {
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
-                  <Table/>
+                  <Jokes />
+                  
+                  <Table />
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
