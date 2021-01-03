@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import dislikeImg from './images/dislike.png';
 import likeImg from './images/like.png';
-import jokeList from './jokes.json';
-import { __esModule } from 'react-reveal/globals';
+import jokeList from './jokesData.json';
 
 class Jokes extends Component {
     
