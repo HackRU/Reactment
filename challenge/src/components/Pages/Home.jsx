@@ -36,6 +36,25 @@ const Home = (props) => {
                 <MonthAndYear />
                 <BabyYoda />
                 <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+                <KrabbyPatty />
+
             </div>
 
 

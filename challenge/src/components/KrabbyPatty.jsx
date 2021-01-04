@@ -10,7 +10,7 @@ class KrabbyPatty extends Component {
   render () {
     return (
       <div>
-        <img width='200' height='166' src={KrabbyPattyURI} onClick={this.imageClick} />
+        <img width='300' height='300' src={KrabbyPattyURI} onClick={this.imageClick} />
       </div>
     );
   }
