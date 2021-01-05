@@ -130,13 +130,13 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  fixed: PropTypes.bool,
-  items: PropTypes.array
+	fixed: PropTypes.bool,
+	items: PropTypes.array,
 };
 
 Navbar.defaultPropTypes = {
-  fixed: true,
-  items: []
+	fixed: true,
+	items: [],
 };
 
 export default withStyles(useStyles)(withMediaQuery('(min-width:768px)')(Navbar))

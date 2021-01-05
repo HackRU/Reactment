@@ -25,11 +25,11 @@ class About extends React.Component {
       if (this.state.length <= 1) {
         break;
       }
-      else if (stands[RandomNum] == true) {
+      else if (stands[RandomNum] === true) {
         stands[RandomNum] = false;
 
         // If Star Platinum disintegrated then display Unbalanced! on the console
-        if (RandomNum == 3) {
+        if (RandomNum === 3) {
           console.log("Unbalanced!");
         }
       }

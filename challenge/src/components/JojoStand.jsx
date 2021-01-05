@@ -22,6 +22,7 @@ class JojoStand extends React.Component{
                         src={this.props.url}
                         height="50%"
                         width="50%"
+                        alt="It's an alien"
                     ></img>
                     <p>{this.props.stand}</p>
                 </center>

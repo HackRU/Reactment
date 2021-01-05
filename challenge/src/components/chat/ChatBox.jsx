@@ -8,7 +8,7 @@ export default class ChatBox extends Component {
 
     onChange = e => this.setState({question: e.target.value})
     onSend = () => {
-        if (this.state.question == '')
+        if (this.state.question === '')
             return;
 
         this.setState(state => ({
@@ -42,7 +42,7 @@ export default class ChatBox extends Component {
                   placeholder='Enter your question...'
                   value={this.state.question}
                   onChange={this.onChange}
-                  onKeyPress={e => e.key == 'Enter' && this.onSend()} />
+                  onKeyPress={e => e.key === 'Enter' && this.onSend()} />
                 <span onClick={this.onSend}>&gt;</span>
               </div>
             </div>
