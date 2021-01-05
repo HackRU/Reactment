@@ -1,31 +1,26 @@
-import React from 'react'
-import BabyYoda from "../../mandalorian/BabyYoda";
-import NumberLogger from "../../NumberLogger";
-import strings from "../../strings.json";
-import Fade from "react-reveal/Fade";
-import Table from '../Table'
-import GIF from "../Gif"
+import React from 'react';
+import BabyYoda from '../../mandalorian/BabyYoda';
+import NumberLogger from '../../NumberLogger';
+import strings from '../../strings.json';
+import Fade from 'react-reveal/Fade';
 import MonthAndYear from '../MonthAndYear';
 import Counter from "../Counter";
 import KrabbyPatty from "../KrabbyPatty";
 import RandomAds from "../RandomAds";
-
+import Button from '@material-ui/core/Button';
 
 const Home = (props) => {
     return (
         <div>
             <div>
             <div
-              style={{ width: "100%", marginTop: "4rem", textAlign: "center" }}
+              style={{ width: "100%", marginTop: "8rem", textAlign: "center", position: "relative", zIndex: '1' }}
             >
               <Fade left cascade>
                 {strings.greeting}
 
-                <form action="https://github.com/HackRU">
-                  <input type="submit" value="Go to HackRU's GitHub!" />
-                </form>
-
-                <button type="button"> Help Button </button>
+                <Button style={{ margin: "20px", color: "white" }} href="https://github.com/HackRU" color="primary" variant="contained"> Go to HackRu's GitHub </Button>
+                <Button style={{ margin: "20px", color: "grey" }} color="secondary" variant="contained"> Help Button </Button>
                 <NumberLogger />
               </Fade>
               <div>

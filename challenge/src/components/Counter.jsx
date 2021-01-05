@@ -16,9 +16,9 @@ export default class Counter extends React.Component {
       render() {
           return (
             <div className = "counter" >
-                <p class = "text-right">This page has</p>
-                <h1 id = "count" class = "text-right">{this.randomize(this.state.count)}</h1>
-                <p class = "text-right">views</p>
+                <p className = "text-right">This page has</p>
+                <h1 id = "count" className = "text-right">{this.randomize(this.state.count)}</h1>
+                <p className = "text-right">views</p>
             </div>
           )
       }
