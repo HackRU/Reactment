@@ -1,4 +1,6 @@
 import React from 'react'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class SponsorForm extends React.Component {
 
@@ -33,7 +35,7 @@ class SponsorForm extends React.Component {
   }
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form style={{margin: "20px"}} onSubmit={this.handleSubmit}>
         <div
         style={{
           color: "white",
@@ -53,10 +55,9 @@ class SponsorForm extends React.Component {
           justifyContent: "center",
           flexDirection: "row"
         }}>
-          <label>Name:</label>
-          <input type="text" name="name" onChange={this.handleChange}/>
-        <label>Amount:</label>
-        <input type="number" name="amount" onChange={this.handleChange} />
+     
+        <TextField style={{margin: "10px"}} variant="filled" label="Name" style={{ color: "white" }} type="text" name="name" onChange={this.handleChange} />
+        <TextField style={{margin: "10px"}}  variant="filled" label="Amount" type="number" name="amount" onChange={this.handleChange}/>
         </div>
         <div
         style={{
@@ -65,7 +66,7 @@ class SponsorForm extends React.Component {
           justifyContent: "center",
           flexDirection: "row"
         }}>
-        <input type="submit" value="Become A Sponsor Now!" />
+        <Button type="submit" color="secondary" variant="outlined">Become A Sponsor Now!</Button>
         <p>&nbsp;</p>
         {this.state.show && <p>{this.state.rating} Star Sponsor:&nbsp; </p>}
         {this.state.show && <p> {this.state.submittedName}</p>}
