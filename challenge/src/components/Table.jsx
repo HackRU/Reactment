@@ -1,98 +1,73 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import TableMUI from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCellMUI from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+const  TableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.secondary.dark,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.common.white,
+    },
+  }))(TableCellMUI);
+
+function createData(sign, date, percentage)
+{
+    return {sign, date, percentage};
+}
+const rows = [ 
+    createData('Scorpio', 'October 23rd to November 21st', '9.6%'),
+    createData('Virgo',	'August 23rd to September 22nd',	'9.4%'),
+    createData('Gemini',' May 21st to June 20th', '9.3%'),
+    createData('Pisces',' February 19th to March 20th', '9.1%'),
+    createData('Libra ','September 23rd to October 22nd ','8.8% '),		
+	createData('Cancer ','June 21st to July 22nd ','8.5% '),	 
+	createData( 'Taurus ','April 20th to May 20th ', '8.3% '),				 
+	createData( 'Capricorn ', 'December 22nd to January 19th ', '8.2% '),				 				 
+	createData(	 'Aries ','March 21st to April 19th ','8.1% '),				 				 
+	createData('Sagittarius ','November 22nd to December 21st ','7.3% '),								 
+	createData( 'Leo ','July 23rd to August 22nd ', '7.1% '),				 				 
+	createData('Aquarius ','January 20th to February 18th ','6.3% ')
+];
 
 class Table extends Component {
-	state = {};
+    state = {}
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-		return ( 
-			<table className="Signs">
-				<thead>
-					<tr>
-						<th colSpan="4">Most to Least Common Zodiac Signs</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr> 
-						<th>Rank</th>
-						<th>Sign</th>
-						<th>Dates</th>
-						<th>% of US Population</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Scorpio</td>
-						<td>October 23rd to November 21st</td>
-						<td>9.6%</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Virgo</td>
-						<td>August 23rd to September 22nd</td>
-						<td>9.4%</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Gemini</td>
-						<td>May 21st to June 20th</td>
-						<td>9.3%</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>Pisces</td>
-						<td>February 19th to March 20th</td>
-						<td>9.1%</td>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>Libra</td>
-						<td>September 23rd to October 22nd</td>
-						<td>8.8%</td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>Cancer</td>
-						<td>June 21st to July 22nd</td>
-						<td>8.5%</td>
-					</tr>
-					<tr>
-						<td>7</td>
-						<td>Taurus</td>
-						<td>April 20th to May 20th</td>
-						<td>8.3%</td>
-					</tr>
-					<tr>
-						<td>8</td>
-						<td>Capricorn</td>
-						<td>December 22nd to January 19th</td>
-						<td>8.2%</td>
-					</tr>
-					<tr>
-						<td>9</td>
-						<td>Aries</td>
-						<td>March 21st to April 19th</td>
-						<td>8.1%</td>
-					</tr>
-					<tr>
-						<td>10</td>
-						<td>Sagittarius</td>
-						<td>November 22nd to December 21st</td>
-						<td>7.3%</td>
-					</tr>
-					<tr>
-						<td>11</td>
-						<td>Leo</td>
-						<td>July 23rd to August 22nd</td>
-						<td>7.1%</td>
-					</tr>
-					<tr>
-						<td>12</td>
-						<td>Aquarius</td>
-						<td>January 20th to February 18th</td>
-						<td>6.3%</td>
-					</tr>
-				</tbody>
-			</table>
-		);
-	}
+render () {
+    return (
+        <TableContainer>
+            <TableMUI style={{ maxWidth: "800px", margin: '0 auto' }} size="small">
+                <TableHead>
+                    <TableRow>                      
+                        <TableCell align="right">Rank</TableCell>
+                        <TableCell align="right">Sign</TableCell>
+                        <TableCell align="right">Dates</TableCell>
+                        <TableCell align="right">% of US Population</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                {rows.map((row, index) => (
+                    <TableRow key={index+1}>                
+                    <TableCell align="right">{index+1}</TableCell>
+                    <TableCell align="right">{row.sign}</TableCell>
+                    <TableCell align="right">{row.date}</TableCell>
+                    <TableCell align="right">{row.percentage}</TableCell>
+                    </TableRow>
+                ))}
+                </TableBody>
+            </TableMUI>
+        </TableContainer>    
+    );
+}
 }
 export default Table;

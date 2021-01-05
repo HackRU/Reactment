@@ -1,6 +1,7 @@
 import React from 'react'
 import JojoStand from '../JojoStand'
 import RandomAds from "../RandomAds";
+import Button from '@material-ui/core/Button';
 
 class About extends React.Component {
   constructor(props) {
@@ -96,9 +97,9 @@ class About extends React.Component {
             <br />
           </div>
           <center>
-            <button style={{ margin: "20px", padding: "10px" }} onClick={this.snap}>
+            <Button color="secondary" variant="outlined" style={{ margin: "20px", padding: "10px" }} onClick={this.snap}>
               Thanos Snap
-              </button>
+            </Button>
           </center>
         </div>
       </div>
