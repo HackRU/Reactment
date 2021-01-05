@@ -2,7 +2,6 @@ import React from 'react'
 import AnnouncementList from '../announce/AnnouncementComponent'
 import RandomAds from "../RandomAds";
 
-
 const Announcements = (props) => {
     return (
         <>
@@ -27,5 +26,4 @@ const Announcements = (props) => {
         </>
     )
 }
-
 export default Announcements
