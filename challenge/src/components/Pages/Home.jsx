@@ -35,7 +35,7 @@ const Home = (props) => {
                 <RandomAds />
                 <MonthAndYear />
                 <BabyYoda />
-                <KrabbyPatty />
+                {/* <KrabbyPatty /> */}
             </div>
 
 

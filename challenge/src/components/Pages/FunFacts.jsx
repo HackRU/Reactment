@@ -2,6 +2,7 @@ import React from 'react'
 import GIF from "../Gif"
 import Table from '../Table'
 import RandomAds from "../RandomAds";
+import KrabbyPatty from "../KrabbyPatty";
 const FunFacts = (props) => {
    
     return (
@@ -16,9 +17,12 @@ const FunFacts = (props) => {
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-               
-                }  
+                  <KrabbyPatty />
+                  
         </div>
+        
+          
+        
 
     )
               }
