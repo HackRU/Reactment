@@ -25,7 +25,10 @@ const Home = (props) => {
                   <input type="submit" value="Go to HackRU's GitHub!" />
                 </form>
 
-                <button type="button"> Help Button </button>
+                {/* <button type="button"> Help Button </button> */}
+                <form method="get" action="/page2">
+                  <button type="submit">Help Button</button>
+                </form>
                 <NumberLogger />
               </Fade>
               <div>
