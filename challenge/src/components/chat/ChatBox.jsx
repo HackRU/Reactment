@@ -7,17 +7,17 @@ export default class ChatBox extends Component {
 
     constructor(){
       super();
-
-      this.state1 = {
-            diffX: 0,
-            diffY: 0,
-            dragging: false,
-            styles: {}
+        this.state1 = {
+          diffX: 0,
+          diffY: 0,
+          dragging: false
         }
 
         this.dragStart = this.dragStart.bind(this);
         this.dragging = this.dragging.bind(this);
         this.dragEnd = this.dragEnd.bind(this);
+
+
     }
 
     dragStart(e) {
@@ -26,27 +26,38 @@ export default class ChatBox extends Component {
            diffY: e.screenY - e.currentTarget.getBoundingClientRect().top,
            dragging: true
        });
-   }
+     }
 
    dragging(e) {
-
-       if(this.state.dragging) {
-           var left = e.screenX - this.state.diffX;
-           var top = e.screenY - this.state.diffY;
-
-           this.setState({
-               styles: {
-                   left: left,
-                   top: top
+       document.addEventListener('mousemove', e =>{
+         if(this.state.dragging) {
+         var left = e.screenX - this.state.diffX;
+         var top = e.screenY - this.state.diffY;
+         this.setState({
+             styles: {
+                 left: left,
+                 top: top
                }
            });
-       }
+        }
+       });
+
+
    }
 
-   dragEnd() {
+   dragEnd(e) {
+      if(this.state.dragging){
+        document.addEventListener('mouseup', e =>{
+          this.setState({
+              dragging: false
+          });
+        });
+      }
+
        this.setState({
            dragging: false
        });
+
    }
     state = {messages: [], question: ''}
 
@@ -73,9 +84,10 @@ export default class ChatBox extends Component {
         })), 500);
     }
 
+
     render() {
         return (
-            <div className={styles.container} style={this.state.styles} onMouseDown={this.dragStart} onMouseMove={this.dragging} onMouseUp={this.dragEnd}>
+            <div id="box" className={styles.container} style={this.state.styles} onMouseDown={this.dragStart} onMouseMove={this.dragging} onMouseUp={this.dragEnd}>
               <span className={styles.title}>ReactMent Help</span>
               <div className={styles.body}>
                 {this.state.messages.map((msg, i) => (<ChatMessage key={i} {...msg} />))}
