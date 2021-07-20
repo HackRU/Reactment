@@ -22,10 +22,10 @@ const page_index_mapper = (page_name) => {
         'sponsors' : 1,
         'about' : 2,
         'contact us' : 3,
-        'fun facts' : 4,
-        'announcements' : 5,
+        'announcements' : 4,
+        'fun facts' : 5,
     }
-    return mapping[page_name] || undefined
+    return mapping[page_name] === undefined ? undefined : mapping[page_name]
 }
 
 class App extends Component {
@@ -40,8 +40,9 @@ class App extends Component {
       const url_regex = RegExp("/([^/]+)?")
       const location = window.location.pathname
       const location_match = location.match(url_regex)
-      const curPageName = location_match[1] ? location_match[1].replace(/\s/, '_') : "home"
-      this.setState({ currentPage: 0, currentPageName : curPageName })
+      const curPageName = location_match[1] ? location_match[1].replace(/_/, ' ') : "home"
+      const curPageNo = page_index_mapper(curPageName)
+      this.setState({ currentPage: curPageNo ? curPageNo : 6, currentPageName : curPageName })
   }
 
   handlePageChange(index, indexName) {
@@ -50,7 +51,7 @@ class App extends Component {
   }
 
   Router(param) {
-      const page_name = param.PageName?.toLowerCase()
+      const page_name = param.PageName?.toLowerCase().replace(/_/, ' ')
     switch (page_name) {
       case 'home':
         return (
