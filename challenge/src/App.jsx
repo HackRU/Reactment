@@ -16,6 +16,18 @@ const theme = createMuiTheme({
   }
 })
 
+const page_index_mapper = (page_name) => {
+    const mapping = {
+        'home' : 0,
+        'sponsors' : 1,
+        'about' : 2,
+        'contact us' : 3,
+        'announcements' : 4,
+        'fun facts' : 5,
+    }
+    return mapping[page_name] === undefined ? undefined : mapping[page_name]
+}
+
 class App extends Component {
   state = {};
   constructor(props) {
@@ -24,34 +36,45 @@ class App extends Component {
     this.handlePageChange = this.handlePageChange.bind(this);
   }
 
+  componentDidMount() {
+      const url_regex = RegExp("/([^/]+)?")
+      const location = window.location.pathname
+      const location_match = location.match(url_regex)
+      const curPageName = location_match[1] ? location_match[1].replace(/_/, ' ') : "home"
+      const curPageNo = page_index_mapper(curPageName)
+      this.setState({ currentPage: curPageNo ? curPageNo : 6, currentPageName : curPageName })
+  }
+
   handlePageChange(index, indexName) {
     this.setState({ currentPage: index, currentPageName: indexName });
+    window.history.pushState(null, null, `/${indexName.replace(/\s+/, '_').toLowerCase()}` )
   }
 
   Router(param) {
-    switch (param.PageName) {
-      case 'Home':
+      const page_name = param.PageName?.toLowerCase().replace(/_/, ' ')
+    switch (page_name) {
+      case 'home':
         return (
           <Home currentpage={param.PageRoute}/>
         );
-      case 'Sponsors':
+      case 'sponsors':
         return (
           <Sponsors currentpage={param.PageRoute}/>
         );
-      case 'About':
+      case 'about':
         return (
           <About currentpage={param.PageRoute}/>
 
         );
-      case 'Contact us':
+      case 'contact us':
         return (
           <Contact currentpage={param.PageRoute} />
         );
-        case 'Fun Facts':
+        case 'fun facts':
           return (
             <FunFacts currentpage={param.PageRoute} />
           );
-      case 'Announcements':
+      case 'announcements':
         return(
           <Announcements currentpage={param.PageRoute} />
         );
