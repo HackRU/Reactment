@@ -104,7 +104,7 @@ class App extends Component {
 
 const sum = list => {
   let result = 0;
-  for (let i = 1; i < list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     result += list[i];
   }
   return result;
