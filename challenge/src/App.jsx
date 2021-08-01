@@ -5,6 +5,7 @@ import Sponsors from "./components/Pages/Sponsors";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import FunFacts from "./components/Pages/FunFacts";
+import Memes from "./components/Pages/Memes"
 import Announcements from "./components/Pages/Announcements";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
@@ -24,6 +25,7 @@ const page_index_mapper = (page_name) => {
         'contact us' : 3,
         'announcements' : 4,
         'fun facts' : 5,
+        'memes' : 6
     }
     return mapping[page_name] === undefined ? undefined : mapping[page_name]
 }
@@ -78,6 +80,10 @@ class App extends Component {
         return(
           <Announcements currentpage={param.PageRoute} />
         );
+      case 'memes':
+        return(
+          <Memes currentpage={param.PageRoute} />
+        );
       default:
         return <div>An error occured.</div>;
     }
@@ -92,7 +98,7 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <Navbar
           fixed={true}
-          items={["Home", "Sponsors", "About", "Contact us", "Announcements", "Fun Facts"]}
+          items={["Home", "Sponsors", "About", "Contact us", "Announcements", "Fun Facts", "Memes"]}
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
