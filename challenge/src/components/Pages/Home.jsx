@@ -8,6 +8,7 @@ import Counter from "../Counter";
 import KrabbyPatty from "../KrabbyPatty";
 import RandomAds from "../RandomAds";
 import Button from '@material-ui/core/Button';
+import Mando from "../Mando";
 
 const Home = (props) => {
     return (
@@ -30,6 +31,7 @@ const Home = (props) => {
                 <RandomAds />
                 <MonthAndYear />
                 <BabyYoda />
+                <Mando />
                 <KrabbyPatty />
                 <KrabbyPatty />
                 <KrabbyPatty />
