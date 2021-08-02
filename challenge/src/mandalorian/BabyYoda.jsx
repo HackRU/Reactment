@@ -21,7 +21,7 @@ export default class BabyYoda extends Component {
         return (
             <div className="baby-yoda" style={{height}}>
               <div className="baby-yoda-content">
-                <h1>Do Not</h1>
+                <h1>Touch This</h1>
                 <div>
                   <img src={BabyYodaURI} alt={strings.babyYodaAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
                   <img src={ThugLifeGlassesURI} alt={strings.thugLifeGlassesAlt} onLoad={this.onImageLoad} onMouseMove={this.onImageHover} />
