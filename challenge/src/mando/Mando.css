@@ -1,0 +1,45 @@
+.mando {
+    position: relative;
+}
+
+.mando > div {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.mando h1, .mando img:last-child {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.mando h1 {
+    font-family: Impact, sans-serif;
+}
+
+.mando h1:first-child {
+    margin-bottom: 0;
+}
+
+.mando h1:last-child {
+    margin-top: 0;
+}
+
+.mando > div > div {
+    position: relative;
+    width: 20rem;
+}
+
+.mando img:first-child {
+    border-radius: 30%;
+    width: 100%;
+}
+
+.mando img:last-child {
+    left: 4.7rem;
+    position: absolute;
+    top: .4rem;
+    transform: rotate(-5deg);
+    width: 60%;
+}
