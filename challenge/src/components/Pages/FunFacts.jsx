@@ -1,26 +1,17 @@
 import React from 'react'
 import GIF from "../Gif"
-import Table from '../Table'
-import RandomAds from "../RandomAds"
-import Jokes from '../Jokes';
+
 
 const FunFacts = (props) => {
    
     return (
         <div>
-            <RandomAds />
-            <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
-              <center>Fun Facts</center>
+            <h1 style={{ fontSize: 110, color: "#000000" }}>
+              <center>Fun Facts!!</center>
             </h1>
-                  <Jokes />
-                  <Table />
-                  <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                  <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                  <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                  <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-                  <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-               
-                }  
+                  <GIF gifsrc="https://media.giphy.com/media/g9582DNuQppxC/giphy.gif"/>
+                  <p>Hey, I got a fun fact for you! Did you know that Leonardo DiCaprio was nominated for 5 Academy Awards but didn't actually win one until very recently? </p>
+                  <p>In 2016, he won Best Actor for his role in the movie Revenant. Pretty cool/scary movie!</p>
         </div>
 
     )
