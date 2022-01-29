@@ -43,12 +43,9 @@ export default class BabyYoda extends Component {
     };
 
     animate = () => {
-
-        if (document.querySelector('.baby-yoda') != null  ){
-        setTimeout(() => {if (document.querySelector('.baby-yoda h1:first-child') != null) document.querySelector('.baby-yoda h1:first-child').style.opacity = 1}, 250);
-        setTimeout(() => {if (document.querySelector('.baby-yoda h1:last-child') != null) document.querySelector('.baby-yoda h1:last-child').style.opacity = 1}, 500);
+        setTimeout(() => document.querySelector('.baby-yoda h1:first-child').style.opacity = 1, 250);
+        setTimeout(() => document.querySelector('.baby-yoda h1:last-child').style.opacity = 1, 500);
         document.querySelector('.baby-yoda img:last-child').style.opacity = 1;
-        }
     };
 
     onImageHover = () => {
