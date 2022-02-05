@@ -10,6 +10,7 @@ import PartyParrot from "../PartyParrot"
 import RandomAds from "../RandomAds";
 import Button from '@material-ui/core/Button';
 import Mando from "../Mando";
+import Contractions from '../Contractions';
 
 const Home = (props) => {
     return (
@@ -31,6 +32,7 @@ const Home = (props) => {
                 </div>
                 <RandomAds />
                 <MonthAndYear />
+                <Contractions />
                 <BabyYoda />
                 <Mando />
                 <PartyParrot/>
