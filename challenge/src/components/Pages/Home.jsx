@@ -11,6 +11,7 @@ import RandomAds from "../RandomAds";
 import Button from '@material-ui/core/Button';
 import Mando from "../Mando";
 import ElonMusk from "../ElonMusk";
+import Kanye from "../Kanye"
 
 const Home = (props) => {
     return (
@@ -19,6 +20,7 @@ const Home = (props) => {
             <div
               style={{ width: "100%", marginTop: "8rem", textAlign: "center", position: "relative", zIndex: '1' }}
             >
+               <Kanye/>
               <Fade left cascade>
                 {strings.greeting}
 
