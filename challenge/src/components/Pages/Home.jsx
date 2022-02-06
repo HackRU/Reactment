@@ -10,6 +10,7 @@ import PartyParrot from "../PartyParrot"
 import RandomAds from "../RandomAds";
 import Button from '@material-ui/core/Button';
 import Mando from "../Mando";
+import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye"
 
 const Home = (props) => {
@@ -55,6 +56,7 @@ const Home = (props) => {
                 <KrabbyPatty />
                 <KrabbyPatty />
                 <KrabbyPatty />
+                <ElonMusk />
             </div>
 
 
