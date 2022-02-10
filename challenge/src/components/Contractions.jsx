@@ -1,49 +1,82 @@
 import React, { useState, useRef } from 'react';
 
-  //part of the n't list
-  //should, could, would
+const fillSet = (words, set) => {
+  words.forEach((word) => {
+    set.add(word);
+    //add capitalized counterpart
+    set.add(word.charAt(0).toUpperCase() + word.slice(1));
+  });
+}
 
-  //[wordA, wordB]
-  //if wordB is either not and have, check wordA in it's respective array
+const notWordSet = new Set();
+const notWords = ['should', 'could', 'would', 'do', 'is', 'are', 'does', 'have'];
 
-  //if wordB is not, check the not word dictionary and then add correct word
+const haveWordSet = new Set();
+const haveWords = ['should', 'could', 'would'];
 
-const createContractions = {
+fillSet(notWords, notWordSet);
+fillSet(haveWords, haveWordSet);
 
+const createContractions = (sentence) => {
+  const words = sentence.split(' ');
+
+  const newSentence = [];
+
+  for(let i = 1; i < words.length; i++) {
+
+    if(words[i] === 'have' && haveWordSet.has(words[i-1])) {
+      newSentence.push(words[i-1] + '\'ve');
+      i += 1;
+    } else if(words[i] === 'not' && notWordSet.has(words[i-1])) {
+      newSentence.push(words[i-1] + 'n\'t');
+      i += 1;
+    } else {
+      newSentence.push(words[i-1]);
+    }
+  }
+
+  newSentence.push(words[words.length - 1]);
+  return newSentence.join(' ');
 }
 
 function Contractions() {
   const [input, setInput] = useState("");
+  const [sentence, setSentence] = useState("");
   const inputRef = useRef(null);
 
-  const handleInput = () => {
-
+  const handleChange = (event) => {
+    setInput(event.target.value);
   }
 
-  const handleSubmit = () => {
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSentence(createContractions(input));
   }
 
   return (
     <div style={{
       'width': '100%',
       'display': 'flex',
-      'justify-content': 'center',
-      'flex-direction': 'column',
-      'align-items': 'center',
+      'justifyContent': 'center',
+      'flexDirection': 'column',
+      'alignItems': 'center',
     }
     }>
       <h1 style={{'display': 'block'}}>
         <strong>Contraction-Creator 9000</strong>
       </h1>
       <div>
-        Type a sentence and I'll add some contractions. (e.g. do not => don't). I'm like that.
+        Type a sentence and I'll add some contractions!!!! (e.g. do not => don't)
       </div>
-      <input type='text' ref={inputRef} style={{'margin-bottom': '10px'}}>
+      <input type='text' ref={inputRef} style={{'marginBottom': '10px', 'marginTop': '10px'}}
+      onChange={handleChange}>
 
       </input>
 
-      <input type='submit'></input>
+      <input type='submit' onClick={handleSubmit} value='Contractify!'></input>
+      <div>
+        {sentence}
+      </div>
     </div>
   )
 }
