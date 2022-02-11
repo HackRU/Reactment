@@ -35,7 +35,9 @@ const createContractions = (sentence) => {
     }
   }
 
-  newSentence.push(words[words.length - 1]);
+  const lastWord = words[words.length - 1];
+  if(lastWord !== 'have' && lastWord !== 'not')
+    newSentence.push(words[words.length - 1]);
   return newSentence.join(' ');
 }
 
