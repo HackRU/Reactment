@@ -16,27 +16,36 @@ class About extends React.Component {
   snap = () => {
     var stands = [...this.state.standsVisibility];
 
-    for (var i = 0; i < this.state.length / 2; i++) {
+    if (this.state.length > 1) {
+      for (var i = 0; i < this.state.length / 2; i++) {
 
-      //Randomly select which is disintegrated 
-      var RandomNum = Math.floor(Math.random() * 4);
-      //console.log("disappear: ", RandomNum);
-
-      if (this.state.length <= 1) {
-        break;
-      }
-      else if (stands[RandomNum] === true) {
-        stands[RandomNum] = false;
-
-        // If Star Platinum disintegrated then display Unbalanced! on the console
-        if (RandomNum === 3) {
-          console.log("Unbalanced!");
+        //Randomly select which is disintegrated 
+        var RandomNum = Math.floor(Math.random() * 4);
+        //console.log("disappear: ", RandomNum);
+  
+        if (this.state.length <= 1) {
+          break;
+        }
+        else if (stands[RandomNum] === true) {
+          stands[RandomNum] = false;
+  
+          // If Star Platinum disintegrated then display Unbalanced! on the console
+          if (RandomNum === 3) {
+            console.log("Unbalanced!");
+          }
+        }
+        else {
+          i--;
         }
       }
-      else {
-        i--;
-      }
+    } else {
+      
+      //Displays error message when attempting to thanos snap when only one stand remains
+      window.alert("Thanos’ fingers are sore!");
+
     }
+
+    
     this.setState({
       standsVisibility: stands,
       length: this.state.length / 2
