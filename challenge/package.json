@@ -8,10 +8,11 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.4.0",
         "@testing-library/user-event": "^7.1.2",
+        "@types/react": "^17.0.39",
         "axios": "^0.25.0",
         "chokidar": "^3.5.2",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "react-reveal": "^1.2.2",
         "react-scripts": "^4.0.1"
     },
