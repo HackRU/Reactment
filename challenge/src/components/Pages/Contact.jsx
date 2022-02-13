@@ -4,6 +4,7 @@ import RandomPhoneNumber from '../RandomPhoneNumber'
 import RandomEmail from '../RandomEmail'
 import ChatBox from '../chat/ChatBox'
 import RandomAds from "../RandomAds";
+import RatingBar from '../RatingBar'
 
 const Contact = (props) => {
     const page = props.currentpage
@@ -21,6 +22,7 @@ const Contact = (props) => {
               <h1 style={{ fontSize: 100, color: "#F09F70" }}>
                 <center>Contact Page</center>
               </h1>
+              <center><RatingBar/></center>
               <h1 style={{ fontSize: 25, color: "#F09F70" }}>
 	                      <center> <RandomPhoneNumber/> </center>
               </h1>
