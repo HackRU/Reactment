@@ -34,25 +34,6 @@ const Home = (props) => {
                 <BabyYoda />
                 <Mando />
                 <PartyParrot/>
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
             </div>
 
 
