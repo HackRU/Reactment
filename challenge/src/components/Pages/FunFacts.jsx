@@ -3,6 +3,7 @@ import GIF from "../Gif"
 import Table from '../Table'
 import RandomAds from "../RandomAds"
 import Jokes from '../Jokes';
+import Maguire from '../Maguire';
 
 const FunFacts = (props) => {
    
@@ -19,7 +20,12 @@ const FunFacts = (props) => {
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
-               
+              
+              <div>
+                <center><Maguire /></center>
+                <center style={{color: "white"}}>Fun fact: He's gonna put some dirt in your eye...</center>
+              </div>
+
                 }  
         </div>
 
