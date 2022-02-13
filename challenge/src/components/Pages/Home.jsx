@@ -5,7 +5,6 @@ import strings from '../../strings.json';
 import Fade from 'react-reveal/Fade';
 import MonthAndYear from '../MonthAndYear';
 import Counter from "../Counter";
-import KrabbyPatty from "../KrabbyPatty";
 import PartyParrot from "../PartyParrot"
 import RandomAds from "../RandomAds";
 import Button from '@material-ui/core/Button';
@@ -37,29 +36,8 @@ const Home = (props) => {
                 <BabyYoda />
                 <Mando />
                 <PartyParrot/>
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
-                <KrabbyPatty />
                 <ElonMusk />
             </div>
-
-
         </div>
 
     )
