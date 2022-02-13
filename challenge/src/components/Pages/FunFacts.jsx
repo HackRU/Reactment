@@ -3,6 +3,7 @@ import GIF from "../Gif"
 import Table from '../Table'
 import RandomAds from "../RandomAds"
 import Jokes from '../Jokes';
+import KrabbyPatty from "../KrabbyPatty";
 
 const FunFacts = (props) => {
    
@@ -12,7 +13,9 @@ const FunFacts = (props) => {
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
+                
                   <Jokes />
+                  <KrabbyPatty />
                   <Table />
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
@@ -20,7 +23,7 @@ const FunFacts = (props) => {
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                
-                }  
+                   
         </div>
 
     )
