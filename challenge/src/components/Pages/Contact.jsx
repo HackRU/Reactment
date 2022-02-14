@@ -42,18 +42,14 @@ const Contact = (props) => {
                     flexDirection: "row"
                 }}
               >
-                <RandomImage
-                  page={page * 4}
-                  style={pictureStyling}
-                />
-                <RandomImage
-                  page={page * 8}
-                  style={pictureStyling}
-                />
-                <RandomImage
-                  page={page * 12}
-                  style={pictureStyling}
-                />
+              <h1>
+        <center style={{ fontSize: 30, color: "#FF0000" }}>Who Ya Gonna Call?</center> 
+        <center style={{ fontSize: 80, color: "#FFFF" }}>212-897-1964</center> 
+        <center style={{ fontSize: 50, color: "#FFFF" }}>GHOST-BUSTERS!</center> 
+
+
+        </h1>
+
 
               </div>
               <div style={{ backgroundColor: "whitesmoke" }}>
