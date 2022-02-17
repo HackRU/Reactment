@@ -5,16 +5,19 @@ import RandomAds from "../RandomAds"
 import Jokes from '../Jokes';
 import KrabbyPatty from "../KrabbyPatty";
 import Maguire from '../Maguire';
+import CovidCount from '../CovidCount';
 
 const FunFacts = (props) => {
    
     return (
+      
         <div>
+          
             <RandomAds />
             <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
               <center>Fun Facts</center>
             </h1>
-                
+                  <CovidCount/>
                   <Jokes />
                   <KrabbyPatty />
                   <Table />
@@ -28,6 +31,8 @@ const FunFacts = (props) => {
                 <center><Maguire /></center>
                 <center style={{color: "white"}}>Fun fact: He's gonna put some dirt in your eye...</center>
               </div> 
+               
+                
         </div>
 
     )
