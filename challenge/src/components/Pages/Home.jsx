@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BabyYoda from '../../mandalorian/BabyYoda';
 import NumberLogger from '../../NumberLogger';
 import strings from '../../strings.json';
@@ -12,37 +12,46 @@ import Mando from "../Mando";
 import Contractions from '../Contractions';
 import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye"
+import Questions from "../Modals/Questions";
 
 const Home = (props) => {
-    return (
-        <div>
-            <div>
-            <div
-              style={{ width: "100%", marginTop: "8rem", textAlign: "center", position: "relative", zIndex: '1' }}
-            >
-               <Kanye/>
-              <Fade left cascade>
-                {strings.greeting}
+  const [questionOpen, setquestionOpen] = useState(false);
 
-                <Button style={{ margin: "20px", color: "white" }} href="https://github.com/HackRU" color="primary" variant="contained"> Go to HackRu's GitHub </Button>
-                <Button style={{ margin: "20px", color: "grey" }} color="secondary" variant="contained"> Help Button </Button>
-                <NumberLogger />
-              </Fade>
-              <div>
-                <Counter />
-              </div>
-                </div>
-                <RandomAds />
-                <MonthAndYear />
-                <Contractions />
-                <BabyYoda />
-                <Mando />
-                <PartyParrot/>
-                <ElonMusk />
-            </div>
+
+  return (
+    <div>
+      <div>
+
+        <div
+          style={{ width: "100%", marginTop: "8rem", textAlign: "center", position: "relative", zIndex: '1' }}
+        ><div>
+            {questionOpen ? (<div><Questions close={() => setquestionOpen(!questionOpen)} /></div>) : null}
+          </div>
+
+          <Kanye />
+          <Fade left cascade>
+            {strings.greeting}
+
+            <Button style={{ margin: "20px", color: "white" }} href="https://github.com/HackRU" color="primary" variant="contained"> Go to HackRu's GitHub </Button>
+            <Button style={{ margin: "20px", color: "grey" }} color="secondary" variant="contained" onClick={() => setquestionOpen(!questionOpen)}> Help Button </Button>
+            <NumberLogger />
+          </Fade>
+          <div>
+            <Counter />
+          </div>
         </div>
+        <RandomAds />
+        <MonthAndYear />
+        <Contractions />
+        <BabyYoda />
+        <Mando />
+        <PartyParrot />
+        <ElonMusk />
+      </div>
+    </div>
 
-    )
+  )
+
 }
 
 export default Home
