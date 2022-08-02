@@ -2,7 +2,7 @@ import React from 'react';
 import {Modal} from '@mui/material';
 import {Typography} from '@mui/material';
 import {Box} from '@mui/material';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const RandomImage = (props) => {
 
@@ -19,9 +19,9 @@ const RandomImage = (props) => {
       };
 
       
-    const [modOpen1, setModOpen1] = useState(false);
-    const handleOpen1 = () => setModOpen1(true);
-    const handleClose1 = () => setModOpen1(false);
+    const [modOpen, setModOpen] = useState(false);
+    const handleOpen = () => setModOpen(true);
+    const handleClose = () => setModOpen(false);
     
     
 
@@ -29,8 +29,8 @@ const RandomImage = (props) => {
 return(
     <React.Fragment>
          <Modal
-            open={modOpen1}
-            onClose={handleClose1}
+            open={modOpen}
+            onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
@@ -49,13 +49,12 @@ return(
             </Box>
         </Modal>
         <img
-            onClick={() => handleOpen1()}
+            onClick={() => handleOpen()}
             src={"https://picsum.photos/id/" + props.page + "/500"}
             alt="RandomizedPicsum"
             height="20%"
             width="20%"
             style= {props.style}
-
         ></img>
     </React.Fragment>
 )
