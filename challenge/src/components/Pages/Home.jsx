@@ -12,11 +12,10 @@ import Mando from "../Mando";
 import Contractions from '../Contractions';
 import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye"
-import Questions from "../Modals/Questions";
+import MuiModel from '../Modals/MuiModal';
 
 const Home = (props) => {
   const [questionOpen, setquestionOpen] = useState(false);
-
 
   return (
     <div>
@@ -25,9 +24,8 @@ const Home = (props) => {
         <div
           style={{ width: "100%", marginTop: "8rem", textAlign: "center", position: "relative", zIndex: '1' }}
         ><div>
-            {questionOpen ? (<div><Questions close={() => setquestionOpen(!questionOpen)} /></div>) : null}
+            {questionOpen ? (<div><MuiModel close={() => setquestionOpen(!questionOpen)} /></div>) : null}
           </div>
-
           <Kanye />
           <Fade left cascade>
             {strings.greeting}
