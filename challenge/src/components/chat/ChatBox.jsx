@@ -5,8 +5,8 @@ import ChatMessage from './ChatMessage';
 
 export default class ChatBox extends Component {
 
-    constructor(){
-      super();
+    constructor(props){
+      super(props);
         this.state1 = {
           diffX: 0,
           diffY: 0,
@@ -59,7 +59,7 @@ export default class ChatBox extends Component {
        });
 
    }
-    state = {messages: [], question: ''}
+    state = {messages: [], question: this.props.helpButtonPassedQusetion}
 
     onChange = e => this.setState({question: e.target.value})
     onSend = () => {

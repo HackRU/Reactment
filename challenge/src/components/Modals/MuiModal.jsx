@@ -1,6 +1,7 @@
 import { Modal, Box, Typography } from '@mui/material';
 import React, { Component } from 'react';
 import nickYoungWhat from '../images/nickYoungWhat.jpg';
+//import { withRouter } from "react-router";
 
 export default class MuiModel extends Component {
 
@@ -23,7 +24,9 @@ export default class MuiModel extends Component {
         console.log("sucessfully submited");
         alert("submited");
         this.props.close();
-        window.open('/contact_us', "_self");
+        //add the question to the end of the url
+        window.open(`/contact_us#${this.state.question}`, "_self");
+        
     }
 
 
