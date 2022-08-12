@@ -15,23 +15,31 @@ class SponsorForm extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
   handleSubmit(event) {
-    this.setState({show: true, submittedName: this.state.name});
-    console.log('Name:' + this.state.name);
-    console.log('Amount: $' + this.state.amount);
-
-    if(this.state.amount >= 100) {
-      this.setState({rating: 5});
-    } else if (this.state.amount >= 50) {
-      this.setState({rating: 4});
-    }  else if (this.state.amount >= 25) {
-      this.setState({rating: 3});
-    } else if (this.state.amount >= 10) {
-      this.setState({rating: 2});
-    } else {
-      this.setState({rating: 1});
+    if (this.state.amount > 0){
+      this.setState({show: true, submittedName: this.state.name});
+      console.log('Name:' + this.state.name);
+      console.log('Amount: $' + this.state.amount);
+      if(this.state.amount >= 100) {
+        this.setState({rating: 5});
+      } else if (this.state.amount >= 50) {
+        this.setState({rating: 4});
+      }  else if (this.state.amount >= 25) {
+        this.setState({rating: 3});
+      } else if (this.state.amount >= 10) {
+        this.setState({rating: 2});
+      } else if (this.state.amount < 10 && this.state.amount > 0){
+        this.setState({rating: 1});
+      }
+  
+      if (this.state.amount < 20 && this.state.amount > 0){
+        alert("Sponsor alert: With the amount that you donated, you are too broke to be a sponsor")
+      }
+  
+      event.preventDefault();
+    } else{
+      alert("Amount cannot be empty, 0, or negative values. Try again")
+      event.preventDefault();
     }
-
-    event.preventDefault();
   }
   render () {
     return (
@@ -56,7 +64,7 @@ class SponsorForm extends React.Component {
           flexDirection: "row"
         }}>
      
-        <TextField style={{margin: "10px"}} variant="filled" label="Name" style={{ color: "white" }} type="text" name="name" onChange={this.handleChange} />
+        <TextField style={{margin: "10px"}} variant="filled" label="Name" type="text" name="name" onChange={this.handleChange} />
         <TextField style={{margin: "10px"}}  variant="filled" label="Amount" type="number" name="amount" onChange={this.handleChange}/>
         </div>
         <div
