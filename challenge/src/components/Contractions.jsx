@@ -68,7 +68,7 @@ function Contractions() {
         <strong>Contraction-Creator 9000</strong>
       </h1>
       <div>
-        Type a sentence and I'll add some contractions!!!! (e.g. do not => don't)
+        Type a sentence and I'll add some contractions!!!! (e.g. do not ={'>'} don't)
       </div>
       <input type='text' ref={inputRef} style={{'marginBottom': '10px', 'marginTop': '10px'}}
       onChange={handleChange}>
