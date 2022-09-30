@@ -9,6 +9,7 @@ import meme7 from "../Memes/7.png"
 import meme8 from "../Memes/8.png"
 import meme9 from "../Memes/9.png"
 import meme10 from "../Memes/10.png"
+import { fontSize } from "@mui/system"
 
 function Memes() {
 	const memes = [
@@ -31,7 +32,14 @@ function Memes() {
 	return (
 		<div>
 			<h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
-				<center>Memes!</center>
+				<center>
+					 <span style={{color:'Pink', fontSize: '160px'}} > M </span>
+					 <span style={{color:'orange', fontSize: '140px'}} > E </span>
+					 <span style={{color:'yellow', fontSize: '120px'}} > M </span>
+					 <span style={{color:'green', fontSize: '100px'}} > E </span>
+					 <span style={{color:'blue', fontSize: '80px'}} > S </span>
+					 <span style={{color:'purple', fontSize: '200px'}} > ! </span>
+					</center>
 				<div className="meme-image">
 					<center>
 						<img
