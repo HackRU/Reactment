@@ -5,6 +5,7 @@ import RandomAds from "../RandomAds"
 import Jokes from '../Jokes';
 import KrabbyPatty from "../KrabbyPatty";
 import Maguire from '../Maguire';
+import FriesWithSauce from '../FriesWithSauce';
 import CovidCount from '../CovidCount';
 
 const FunFacts = (props) => {
@@ -20,6 +21,7 @@ const FunFacts = (props) => {
                   <CovidCount/>
                   <Jokes />
                   <KrabbyPatty />
+                  <FriesWithSauce />
                   <Table />
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
                   <GIF gifsrc="https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif"/>
