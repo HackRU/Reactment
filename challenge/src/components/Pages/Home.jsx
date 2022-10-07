@@ -12,6 +12,7 @@ import Mando from "../Mando";
 import Contractions from '../Contractions';
 import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye"
+import Dora from '../Dora';
 
 const Home = (props) => {
     return (
@@ -27,6 +28,7 @@ const Home = (props) => {
                 <Button style={{ margin: "20px", color: "white" }} href="https://github.com/HackRU" color="primary" variant="contained"> Go to HackRu's GitHub </Button>
                 <Button style={{ margin: "20px", color: "grey" }} color="secondary" variant="contained"> Help Button </Button>
                 <NumberLogger />
+                
               </Fade>
               <div>
                 <Counter />
@@ -39,10 +41,20 @@ const Home = (props) => {
                 <Mando />
                 <PartyParrot/>
                 <ElonMusk />
+                <Dora/>
             </div>
         </div>
 
+        
+
     )
+
 }
+
+
+
+
+  
+
 
 export default Home

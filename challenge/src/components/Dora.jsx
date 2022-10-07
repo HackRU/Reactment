@@ -1,16 +1,33 @@
 import React, { Component } from 'react';
-import MaguireURI from './images/Dora.jpg';
+import DoraURI from './images/dora.jpg';
 
 class Dora extends Component {
+	constructor(props) {
+        super(props);
+        this.state = {
+            leftPositionState: 200,
+			topPositionState: 200
+        };
+    }
+	imageClick=()=>{
+		this.setState({leftPositionState: Math.random()*(window.innerWidth-400), topPositionState: Math.random()*500})
+	}
 
 	render() {
 		return (
-			<div>
+			<div style={{position:'relative'}}>
 				<img
-					width="250"
-					height="150"
+					width="400"
+					height="400"
+					style={{
+						left:this.state.leftPositionState,
+						top:this.state.topPositionState,
+						position:'absolute'
+						
+					}}
 					src={DoraURI}
-                    alt="Dora dancing"
+					onClick={this.imageClick}
+                    alt="Dora waving"
 				/>
 			</div>
 		);
