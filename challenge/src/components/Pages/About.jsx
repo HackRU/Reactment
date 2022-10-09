@@ -10,7 +10,8 @@ class About extends React.Component {
       standsVisibility: [
         true, true, true, true
       ],
-      length: 4
+      length: 4,
+      text: this.smartQuote(),
     }
   }
   snap = () => {
@@ -22,13 +23,13 @@ class About extends React.Component {
         //Randomly select which is disintegrated 
         var RandomNum = Math.floor(Math.random() * 4);
         //console.log("disappear: ", RandomNum);
-  
+
         if (this.state.length <= 1) {
           break;
         }
         else if (stands[RandomNum] === true) {
           stands[RandomNum] = false;
-  
+
           // If Star Platinum disintegrated then display Unbalanced! on the console
           if (RandomNum === 3) {
             console.log("Unbalanced!");
@@ -39,17 +40,23 @@ class About extends React.Component {
         }
       }
     } else {
-      
+
       //Displays error message when attempting to thanos snap when only one stand remains
       window.alert("Thanos’ fingers are sore!");
 
     }
 
-    
+
     this.setState({
       standsVisibility: stands,
       length: this.state.length / 2
     })
+  }
+
+  smartQuote() {
+    fetch("https://techy-api.vercel.app/api/json")
+      .then((response) => response.json())
+      .then((data) => this.setState({ text: data.message }))
   }
 
   render() {
@@ -71,10 +78,11 @@ class About extends React.Component {
         url: "https://cdn.discordapp.com/attachments/701574644595032104/710625607503052800/StarPlatinumMangaAv.png"
       }
     ];
-    return (
-        <div>
 
-            <RandomAds />
+    return (
+      <div>
+
+        <RandomAds />
         <div>
           <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
             <center>About Page</center>
@@ -109,9 +117,10 @@ class About extends React.Component {
             <Button color="secondary" variant="outlined" style={{ margin: "20px", padding: "10px" }} onClick={this.snap}>
               Thanos Snap
             </Button>
+            <p>{this.state.text}</p>
           </center>
         </div>
-      </div>
+      </div >
     )
   }
 }
