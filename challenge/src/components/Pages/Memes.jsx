@@ -33,6 +33,7 @@ function Memes() {
 		<div>
 			<h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
 				<center>
+					
 					 <span style={{color:'Pink', fontSize: '160px'}} > M </span>
 					 <span style={{color:'orange', fontSize: '140px'}} > E </span>
 					 <span style={{color:'yellow', fontSize: '120px'}} > M </span>
