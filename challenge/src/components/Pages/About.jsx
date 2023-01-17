@@ -89,6 +89,9 @@ class About extends React.Component {
           </h1>
           <div style={{ backgroundColor: "whitesmoke" }}>
             <br />
+            <p>HackRU is a 24-hour hackathon at Rutgers University, hosted every semester. Come join us for a weekend filled with learning and creating.
+</p>
+            <br />
           </div>
           <div
             style={{
