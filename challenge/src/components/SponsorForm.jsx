@@ -32,7 +32,10 @@ class SponsorForm extends React.Component {
       }
   
       if (this.state.amount < 20 && this.state.amount > 0){
-        alert("Sponsor alert: With the amount that you donated, you are too broke to be a sponsor")
+        const sponser_name = localStorage.getItem("username") !== null ? " " + localStorage.getItem("username"): "you";
+        alert("Sponsor alert: With the amount that" +
+        sponser_name + 
+        " donated, you are too broke to be a sponsor")
       }
   
       event.preventDefault();
