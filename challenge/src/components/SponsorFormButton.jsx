@@ -14,8 +14,8 @@ const RandomImage = (props) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: "lightblue",
+        width: 500,
+        bgcolor: "red",
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
@@ -29,7 +29,26 @@ const RandomImage = (props) => {
     const stars = " \u2728 ".repeat(props.rating);
     const spaces = props.sponserName !== "" ? " " +  props.sponserName: "";
 
-    if (props.rating == 0){
+
+    if(!props.show){
+        return        ( <React.Fragment>
+        <Modal
+            open={modOpen}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            <Box sx={ModalStyle}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                Amount cannot be empty, 0, or negative values. Try again"
+                </Typography>
+            </Box>
+        </Modal>
+        <Button type="submit" onClick={() => handleOpen()} color="secondary" variant="outlined">Become A Sponsor Now!</Button>
+    </React.Fragment>)
+    }
+
+    else if (props.rating === 0){
 
         return(
         <React.Fragment>
@@ -64,7 +83,7 @@ return(
                     {stars}<br></br>
                     {props.rating} star sponser!
                 </Typography>
-                <Typography style={{color: "red", fontWeight: "500px"}}>
+                <Typography style={{color: "yellow", fontWeight: "500px"}}>
                     Thank you{spaces}!
                 </Typography>
 

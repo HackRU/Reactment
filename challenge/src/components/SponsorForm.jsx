@@ -9,8 +9,6 @@ class SponsorForm extends React.Component {
 
   constructor () {
 
-    
-
     super();
     this.state = {name: localStorage.getItem("username") !== null ? localStorage.getItem("username"): "",amount: '',submittedName: localStorage.getItem("username") !== null ? localStorage.getItem("username"): "",rating: 0, show: false};
     this.handleChange = this.handleChange.bind(this);
@@ -27,24 +25,30 @@ class SponsorForm extends React.Component {
       console.log('Amount: $' + this.state.amount);
       if(this.state.amount >= 100) {
         this.setState({rating: 5});
+        this.setState({show:true});
       } else if (this.state.amount >= 50) {
         this.setState({rating: 4});
+        this.setState({show:true});
       }  else if (this.state.amount >= 25) {
         this.setState({rating: 3});
+        this.setState({show:true});
       } else if (this.state.amount >= 10) {
         this.setState({rating: 2});
+        this.setState({show:true});
       } else if (this.state.amount < 10 && this.state.amount > 0){
         this.setState({rating: 1});
+        this.setState({show:true});
       }
   
       if (this.state.amount < 20 && this.state.amount > 0){
         this.setState({rating: 0});
+        this.setState({show:true});
       }
-  
       event.preventDefault();
     } else{
-      alert("Amount cannot be empty, 0, or negative values. Try again")
+      this.setState({show:false});
       event.preventDefault();
+
     }
   }
   render () {
@@ -85,6 +89,7 @@ class SponsorForm extends React.Component {
         <SponsorFormButton
           rating =  {this.state.rating}        
           sponserName = {this.state.submittedName}
+          show = {this.state.show}
         />
  
 
