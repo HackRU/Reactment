@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './ChatBox.module.css';
-
+import Troll from "../images/Troll.png";
 import ChatMessage from './ChatMessage';
 
 export default class ChatBox extends Component {
@@ -74,14 +74,31 @@ export default class ChatBox extends Component {
             }, ...state.messages],
             question: '',
         }));
+      
+      function randomArrayIndex()
+      {
+        const randArray = ["I'm sorry, I don't have that information. But did you know that the sky is blue?",
+            "I'm not sure what you're asking. Have you tried turning it off and on again?",
+            "Hmmm, that's an interesting question. But have you considered taking a break and going for a walk instead?"];
+        const rand = Math.floor(Math.random() * randArray.length);
+        return randArray[rand];
+
+      }
 
         setTimeout(() => this.setState(state => ({
             messages: [{
                 from: 'ReactMent Bot',
-                message: "I didn't quite understand that, please try rephrasing what you said.",
+                message: randomArrayIndex(),
                 date: new Date().toLocaleTimeString(),
             }, ...state.messages],
         })), 500);
+        setTimeout(() => this.setState(state => ({
+          messages: [{
+              from: 'ReactMent Bot',
+              message: <img src = {Troll} style={{width: '50px', height: '50px'}}/>,
+              date: new Date().toLocaleTimeString(),
+          }, ...state.messages],
+      })), 500);
     }
 
 
