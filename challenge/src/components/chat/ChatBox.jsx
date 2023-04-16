@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './ChatBox.module.css';
-import Troll from '/Users/dhruvchaudhari/Desktop/Reactment/challenge/src/components/images/Troll.png';
+import Troll from "../images/Troll.png";
 import ChatMessage from './ChatMessage';
 
 export default class ChatBox extends Component {
