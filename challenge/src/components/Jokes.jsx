@@ -78,7 +78,7 @@ class Jokes extends Component {
           </center>
           {/* I did inline css cuz too much work to make a css page ;) */}
           <div>
-            <h2 style={{textAlign:'center'}}>The count is: {this.state.count}</h2>
+            <h2 role="jokeCount" style={{textAlign:'center'}}>The count is: {this.state.count}</h2>
           </div>
         </div>
       </>
