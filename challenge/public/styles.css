@@ -19,7 +19,15 @@ button{
   margin: 4px 2px;
 }
 
+.video-container{
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
+.text-container{
+  margin-left: 200px;
+}
 
 div.fixed {
   position: fixed;
