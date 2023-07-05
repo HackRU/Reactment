@@ -13,6 +13,7 @@ import Contractions from "../Contractions";
 import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye";
 import GetName from "../GetName";
+import RandomColorButton from "../RandomColorButton";
 
 const Home = (props) => {
   return (
@@ -48,6 +49,7 @@ const Home = (props) => {
               {" "}
               Help Button{" "}
             </Button>
+            <RandomColorButton />
             <NumberLogger />
           </Fade>
           <div>
