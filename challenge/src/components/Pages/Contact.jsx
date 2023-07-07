@@ -15,7 +15,7 @@ const Contact = (props) => {
         marginLeft: "5%"
     }
     return (
-        <>
+        <div>
             <div>
                 <RandomAds />
             <div>
@@ -58,7 +58,7 @@ const Contact = (props) => {
             </div>
           </div>
           <ChatBox />
-        </>
+        </div>
     )
 }
 
