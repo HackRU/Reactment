@@ -29,6 +29,7 @@ const Home = (props) => {
         >
           <Kanye />
           <Fade left cascade>
+            <span style={{fontWeight: 'bold'}}>{strings.title}</span>
             {strings.greeting}
 
             <Button
