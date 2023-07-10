@@ -1,11 +1,33 @@
 body {
-  background-color: #cc0033ff;
+  background-color: #FA9884;
   margin: 0;
   padding: 0;
   width: "100%";
   height: "100%";
 }
 
+
+button{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.video-container{
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.text-container{
+  margin-left: 200px;
+}
 
 div.fixed {
   position: fixed;
