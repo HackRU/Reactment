@@ -39,7 +39,7 @@ const createContractions = (sentence) => {
             newSentence.push(words[i-1] + 'n\'t');
           }
           i += 1;
-    } else if(words[i] === 'is' && otherWordSet.has(words[i-1])){
+    } else if(words[i] === 'is' && otherWordSet.has(words[i-1]) && words[i-1] !== "i" && words[i-1] !== "I" && words[i-1] !== "they" && words[i-1] !== "you"){
           newSentence.push(words[i-1] + '\'s');
           i += 1;
     }
