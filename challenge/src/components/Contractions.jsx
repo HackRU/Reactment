@@ -15,7 +15,7 @@ const haveWordSet = new Set();
 const haveWords = ['should', 'could', 'would', 'they', 'we', 'i', 'I', 'you'];
 
 const otherWordSet = new Set();
-const otherWords = ['he','she','it','there','what','where','who','when','let','that','you','i','I','they'];
+const otherWords = ['he','she','it','there','what','where','who','when','that'];
 
 fillSet(notWords, notWordSet);
 fillSet(haveWords, haveWordSet);
@@ -39,7 +39,7 @@ const createContractions = (sentence) => {
             newSentence.push(words[i-1] + 'n\'t');
           }
           i += 1;
-    } else if(words[i] === 'is' && otherWordSet.has(words[i-1]) && words[i-1] !== "i" && words[i-1] !== "I" && words[i-1] !== "they" && words[i-1] !== "you"){
+    } else if(words[i] === 'is' && otherWordSet.has(words[i-1])){
           newSentence.push(words[i-1] + '\'s');
           i += 1;
     }
