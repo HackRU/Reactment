@@ -9,13 +9,17 @@ const fillSet = (words, set) => {
 }
 
 const notWordSet = new Set();
-const notWords = ['should', 'could', 'would', 'do', 'is', 'are', 'does', 'have'];
+const notWords = ['should', 'could', 'would', 'do', 'is', 'are', 'does', 'have', 'will', 'can', 'had', 'has', 'must', 'were', 'did'];
 
 const haveWordSet = new Set();
-const haveWords = ['should', 'could', 'would'];
+const haveWords = ['should', 'could', 'would', 'they', 'we', 'i', 'I', 'you'];
+
+const otherWordSet = new Set();
+const otherWords = ['he','she','it','there','what','where','who','when','that'];
 
 fillSet(notWords, notWordSet);
 fillSet(haveWords, haveWordSet);
+fillSet(otherWords,otherWordSet);
 
 const createContractions = (sentence) => {
   const words = sentence.split(' ');
@@ -24,19 +28,29 @@ const createContractions = (sentence) => {
 
   for(let i = 1; i < words.length; i++) {
 
-    if(words[i] === 'have' && haveWordSet.has(words[i-1])) {
+    if((words[i] === 'have') && haveWordSet.has(words[i-1])) {
       newSentence.push(words[i-1] + '\'ve');
       i += 1;
     } else if(words[i] === 'not' && notWordSet.has(words[i-1])) {
-      newSentence.push(words[i-1] + 'n\'t');
-      i += 1;
-    } else {
+          if(words[i-1] === 'will'){
+            newSentence.push("won't");
+          }
+          else{
+            newSentence.push(words[i-1] + 'n\'t');
+          }
+          i += 1;
+    } else if(words[i] === 'is' && otherWordSet.has(words[i-1])){
+          newSentence.push(words[i-1] + '\'s');
+          i += 1;
+    }
+    
+    else {
       newSentence.push(words[i-1]);
     }
   }
 
   const lastWord = words[words.length - 1];
-  if(lastWord !== 'have' && lastWord !== 'not')
+  if(lastWord !== 'have' && lastWord !== 'not' && lastWord !== 'is')
     newSentence.push(words[words.length - 1]);
   return newSentence.join(' ');
 }
