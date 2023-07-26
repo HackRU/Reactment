@@ -1,16 +1,13 @@
 import React from "react";
-import BabyYoda from "../../mandalorian/BabyYoda";
 import NumberLogger from "../../NumberLogger";
 import strings from "../../strings.json";
 import Fade from "react-reveal/Fade";
 import MonthAndYear from "../MonthAndYear";
 import Counter from "../Counter";
-import PartyParrot from "../PartyParrot";
 import RandomAds from "../RandomAds";
 import Button from "@material-ui/core/Button";
-import Mando from "../Mando";
+
 import Contractions from "../Contractions";
-import ElonMusk from "../ElonMusk";
 import Kanye from "../Kanye";
 import GetName from "../GetName";
 
@@ -58,10 +55,6 @@ const Home = (props) => {
         <RandomAds />
         <MonthAndYear />
         <Contractions />
-        <BabyYoda />
-        <Mando />
-        <PartyParrot />
-        <ElonMusk />
       </div>
     </div>
   );

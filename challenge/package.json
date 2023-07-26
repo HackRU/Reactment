@@ -15,6 +15,7 @@
         "axios": "^1.2.3",
         "chokidar": "^3.5.3",
         "express": "^4.18.2",
+        "gridjs": "^6.0.6",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-reveal": "^1.2.2",

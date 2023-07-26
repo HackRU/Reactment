@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import MemeImage from "../MemeImage";
 import meme1 from "../Memes/1.png"
 import meme2 from "../Memes/2.png"
 import meme3 from "../Memes/3.png"
@@ -9,46 +10,91 @@ import meme7 from "../Memes/7.png"
 import meme8 from "../Memes/8.png"
 import meme9 from "../Memes/9.png"
 import meme10 from "../Memes/10.png"
-
-function Memes() {
-	const memes = [
-		meme1,
-		meme2,
-		meme3,
-		meme4,
-		meme5,
-		meme6,
-		meme7,
-		meme8,
-		meme9,
-		meme10,
-	]
-	const getRandomMeme = () => {
-		const randomMeme = memes[Math.floor(Math.random() * 10)]
-		return randomMeme
-	}
-
+import "./memesStyles.css";
+const Memes = (props) => {
+	const page = props.currentpage;
 	return (
 		<div>
-			<h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
-				<center>Memes!</center>
-				<div className="meme-image">
-					<center>
-						<img
-							src={getRandomMeme()}
-							alt="Meme"
-							style={{
-								width: "100%",
-								maxWidth: "600px",
-								maxHeight: "600px",
-								objectFit: "contain",
-							}}
-						/>
-					</center>
+			<div>
+				<h1 style={{ fontSize: 100, color: "#FFC436" }}>
+					<center>Memes</center>
+				</h1>
+				<div class="grid-container">
+					<div class="meme">
+						<MemeImage
+							description="Teletubbies!"
+							weblink={meme1}
+							page={meme1}
+							height="100%"
+							width="100%"
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Kirby!"
+							weblink={meme2}
+							page={meme2}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Bear!"
+							weblink={meme3}
+							page={meme3}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Minecraft!"
+							weblink={meme4}
+							page={meme4}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Spongebob1!"
+							weblink={meme5}
+							page={meme5}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Spongebob2!"
+							weblink={meme6}
+							page={meme6}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Spongebob3!"
+							weblink={meme7}
+							page={meme7}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Spongebob4!"
+							weblink={meme8}
+							page={meme8}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Winnie the Pooh!"
+							weblink={meme9}
+							page={meme9}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="Pikachu!"
+							weblink={meme10}
+							page={meme10}
+						></MemeImage>
+					</div>
 				</div>
-			</h1>
+			</div>
 		</div>
 	)
-}
-
-export default Memes
+};
+export default Memes;
