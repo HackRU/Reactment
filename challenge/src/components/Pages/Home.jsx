@@ -15,6 +15,7 @@ import Kanye from "../Kanye";
 import GetName from "../GetName";
 import RandomColorButton from "../RandomColorButton";
 import MoviePage from "../MoviePage";
+import Pokesearch from "../Pokesearch";
 
 const Home = (props) => {
   return (
@@ -29,9 +30,11 @@ const Home = (props) => {
             zIndex: "1",
           }}
         >
+          <Pokesearch />
           <Kanye />
+
           <Fade left cascade>
-            <span style={{fontWeight: 'bold'}}>{strings.title}</span>
+            <span style={{ fontWeight: "bold" }}>{strings.title}</span>
             {strings.greeting}
 
             <Button
