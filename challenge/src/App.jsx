@@ -69,7 +69,19 @@ class App extends Component {
       case "sponsors":
         return <Sponsors currentpage={param.PageRoute} />;
       case "about":
-        return <About currentpage={param.PageRoute} />;
+        return <MuiThemeProvider theme={theme}>
+        <Navbar
+          fixed={true}
+          items={[
+            "Sponsors",
+            "Announcements",
+            "Fun Facts",
+          ]}
+          onPageChange={param.self.handlePageChange}
+          currentPage={param.self.state.currentPage}
+        />
+        <About currentpage={param.PageRoute} />
+      </MuiThemeProvider>;
       case "contact us":
         return <Contact currentpage={param.PageRoute} />;
       case "fun facts":
@@ -93,17 +105,15 @@ class App extends Component {
           fixed={true}
           items={[
             "Home",
-            "Sponsors",
             "About",
             "Contact us",
-            "Announcements",
-            "Fun Facts",
             "Memes",
           ]}
           onPageChange={this.handlePageChange}
           currentPage={this.state.currentPage}
         />
         <this.Router
+          self={this}
           PageRoute={this.state.currentPage}
           PageName={this.state.currentPageName}
         />
