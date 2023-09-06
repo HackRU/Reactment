@@ -8,13 +8,23 @@ class NumberLogger extends Component {
     state = {inputs: [], currentInput: createRef()}
 
     handleClick = () => {
-        // updates input state to include both old + new inputs
+        if (this.state.inputs.length < 10){
+            // updates input state to include both old + new inputs
         this.setState({
             inputs: [
                 ...this.state.inputs,
                 parseInt(this.state.currentInput.current.value)
             ]
         })
+        } else {
+            this.setState({
+                inputs: [
+                    "Cleared log",
+                    parseInt(this.state.currentInput.current.value)
+                ]
+            })
+        }
+        
     }
 
     render() {
