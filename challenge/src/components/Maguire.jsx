@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MaguireURI from './images/Maguire.png';
 
-class Maguire extends Component {
+export default function Maguire() {
 
-	render() {
-		return (
-			<div>
-				<img
-					width="500"
-					height="250"
-					src={MaguireURI}
-                    alt="Maguire dancing"
-				/>
-			</div>
-		);
-	}
+    return (
+        <div>
+            <img
+                width="500"
+                height="250"
+                src={MaguireURI}
+                alt="Maguire dancing"
+            />
+        </div>
+    );
+
 }
-
-export default Maguire;

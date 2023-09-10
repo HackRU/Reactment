@@ -1,39 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-class Kanye extends React.Component {
+export default function Kanye() {
+    const [items, setItems] = useState([]);
+    const DataLoaded = useRef(false);
 
-    constructor(props){
-        super(props)
-
-        this.state = {
-            items: [],
-            DataLoaded: false
-        };
-    }
-
-    componentDidMount(){
+    useEffect(() => {
+        if (DataLoaded.current) return;
         fetch(
             "https://api.kanye.rest/"
         )
-        .then((res) => res.json())
-        .then((json) => {
-            this.setState({
-                items: json,
-                DataLoaded: true
+            .then((res) => res.json())
+            .then((json) => {
+                setItems(json);
+                DataLoaded.current = true;
             })
-        })
-    }
+    });
 
-    render(){
-        const {items} = this.state
-
-        return(
-            <div className = "Kanye">
-                <h1>Kanye Quote of the Day: </h1>
-                <h3>{items.quote}</h3>
-            </div>
-        )
-    }
+    return (
+        <div className="Kanye">
+            <h1>Kanye Quote of the Day: </h1>
+            <h3>{items.quote}</h3>
+        </div>
+    )
 }
-
-export default Kanye;
