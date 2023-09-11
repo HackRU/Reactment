@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default class Counter extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          count: 491901
-        }
-  }
+export default function Counter() {
 
-  randomize(max) {
-    max = Math.trunc(Math.random()*max);
-    return max;
-  }
+    const [count] = useState(491901);
 
-      render() {
-          return (
-            <div className = "counter" >
-                <p className = "text-right">This page has</p>
-                <h1 id = "count" className = "text-right">{this.randomize(this.state.count)}</h1>
-                <p className = "text-right">views</p>
-            </div>
-          )
-      }
+    function randomize(max) {
+        max = Math.trunc(Math.random() * max);
+        return max;
+    }
+
+    return (
+        <div className="counter" >
+            <p className="text-right">This page has</p>
+            <h1 id="count" className="text-right">{randomize(count)}</h1>
+            <p className="text-right">views</p>
+        </div>
+    )
+
 }
-
-

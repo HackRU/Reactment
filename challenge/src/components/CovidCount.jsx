@@ -1,29 +1,16 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class CovidCount extends Component{
-    constructor(props){
-        super(props);
-        const date1 = new Date('01/20/2020');
-        const date2 = new Date();
-        const diffTime = Math.abs(date2 - date1);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-        this.state = diffDays;
-        
-       
-    }
+export default function CovidCount() {
 
-    ConsoleLog = ({ children }) => {
-        console.log(children);
-        return false;
-      };
+    const date1 = new Date('01/20/2020');
+    const date2 = new Date();
+    const diffTime = Math.abs(date2 - date1);
+    const [diffDays] = useState(Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
 
-    render() {
-        return(
-            <div>
-                <p><center>Number of days since Covid started: {this.state} days</center></p>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <p><center>Number of days since Covid started: {diffDays} days</center></p>
+        </div>
+    );
+
 }
-
-export default CovidCount;
