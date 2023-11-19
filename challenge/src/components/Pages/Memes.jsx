@@ -10,6 +10,7 @@ import meme7 from "../Memes/7.png"
 import meme8 from "../Memes/8.png"
 import meme9 from "../Memes/9.png"
 import meme10 from "../Memes/10.png"
+import meme11 from "../Memes/11.png"
 import "../memesStyles.css";
 const Memes = (props) => {
 	const page = props.currentpage;
@@ -90,6 +91,13 @@ const Memes = (props) => {
 							description="Pikachu!"
 							weblink={meme10}
 							page={meme10}
+						></MemeImage>
+					</div>
+					<div class="meme">
+						<MemeImage
+							description="programming memes :')"
+							weblink={meme11}
+							page={meme11}
 						></MemeImage>
 					</div>
 				</div>
