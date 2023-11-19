@@ -16,6 +16,7 @@ import GetName from "../GetName";
 import RandomColorButton from "../RandomColorButton";
 import MoviePage from "../MoviePage";
 import Pokesearch from "../Pokesearch";
+import Refresh from "../../Refresh.jsx"
 
 const Home = (props) => {
   return (
@@ -46,14 +47,7 @@ const Home = (props) => {
               {" "}
               Go to HackRu's GitHub{" "}
             </Button>
-            <Button
-              style={{ margin: "20px", color: "grey" }}
-              color="secondary"
-              variant="contained"
-            >
-              {" "}
-              Help Button{" "}
-            </Button>
+            <Refresh/>
             <RandomColorButton />
             <NumberLogger />
           </Fade>
