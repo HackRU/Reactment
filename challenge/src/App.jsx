@@ -6,7 +6,6 @@ import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import FunFacts from "./components/Pages/FunFacts";
 import Memes from "./components/Pages/Memes";
-import Announcements from "./components/Pages/Announcements";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import green from "@material-ui/core/colors/green";
 import yellow from "@material-ui/core/colors/yellow";
@@ -23,9 +22,8 @@ const page_index_mapper = (page_name) => {
     sponsors: 1,
     about: 2,
     "contact us": 3,
-    announcements: 4,
-    "fun facts": 5,
-    memes: 6,
+    "fun facts": 4,
+    memes: 5,
   };
   return mapping[page_name] === undefined ? undefined : mapping[page_name];
 };
@@ -47,7 +45,7 @@ class App extends Component {
       : "home";
     const curPageNo = page_index_mapper(curPageName);
     this.setState({
-      currentPage: curPageNo ? curPageNo : 6,
+      currentPage: curPageNo ? curPageNo : 5,
       currentPageName: curPageName,
     });
   }
@@ -74,8 +72,6 @@ class App extends Component {
         return <Contact currentpage={param.PageRoute} />;
       case "fun facts":
         return <FunFacts currentpage={param.PageRoute} />;
-      case "announcements":
-        return <Announcements currentpage={param.PageRoute} />;
       case "memes":
         return <Memes currentpage={param.PageRoute} />;
       default:
@@ -96,7 +92,6 @@ class App extends Component {
             "Sponsors",
             "About",
             "Contact us",
-            "Announcements",
             "Fun Facts",
             "Memes",
           ]}
