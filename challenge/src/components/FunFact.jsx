@@ -4,7 +4,7 @@ export default function FunFact() {
     const [fact, setFact] = useState(null);
     
     async function getFact() {
-
+        
     }
 
     return (
