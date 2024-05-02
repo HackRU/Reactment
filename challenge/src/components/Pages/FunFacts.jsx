@@ -13,7 +13,6 @@ const FunFacts = (props) => {
   return (
 
     <div>
-
       <RandomAds />
       <h1 style={{ fontSize: 100, color: "#FFF5B8" }}>
         <center>Fun Facts</center>
@@ -34,8 +33,8 @@ const FunFacts = (props) => {
         <center style={{ color: "white" }}>Fun fact: He's gonna put some dirt in your eye...</center>
       </div>
 
-
     </div>
+    
 
   )
 }
