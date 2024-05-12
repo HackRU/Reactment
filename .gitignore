@@ -28,3 +28,6 @@
 *.reallynotjs
 badmeme.gif
 badmeme.gif.exe
+
+# Api Key
+.env
