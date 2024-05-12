@@ -6,6 +6,7 @@ import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import FunFacts from "./components/Pages/FunFacts";
 import Memes from "./components/Pages/Memes";
+import Profile from "./components/Pages/profile"
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import green from "@material-ui/core/colors/green";
 import yellow from "@material-ui/core/colors/yellow";
@@ -74,6 +75,8 @@ class App extends Component {
         return <FunFacts currentpage={param.PageRoute} />;
       case "memes":
         return <Memes currentpage={param.PageRoute} />;
+      case "person":
+          return <Profile name={window.location.href.split("/")[4]} />
       default:
         return <div>An error occured.</div>;
     }
