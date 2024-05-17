@@ -5,6 +5,7 @@ import RandomEmail from '../RandomEmail'
 import ChatBox from '../chat/ChatBox'
 import RandomAds from "../RandomAds";
 import RatingBar from '../RatingBar'
+import RandomText from '../RandomText'
 
 const Contact = (props) => {
     const page = props.currentpage
@@ -44,9 +45,8 @@ const Contact = (props) => {
               >
               <h1>
         <center style={{ fontSize: 30, color: "#FF0000" }}>Who Ya Gonna Call?</center> 
-        <center style={{ fontSize: 80, color: "#FFFF" }}>212-897-1964</center> 
-        <center style={{ fontSize: 50, color: "#FFFF" }}>GHOST-BUSTERS!</center> 
-
+        <center style={{ fontSize: 80, color: "#FFFF" }}><RandomPhoneNumber/></center>
+        <center style={{ fontSize: 50, color: "#FFFF" }}><RandomText/></center> 
 
         </h1>
 
