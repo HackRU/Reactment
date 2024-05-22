@@ -1,0 +1,20 @@
+.newsContainer {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+.articleList {
+    
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+   }
+.article {
+    display: block;
+    
+}
+.article:hover {
+    background-color: orange;
+    text-decoration: none;
+}

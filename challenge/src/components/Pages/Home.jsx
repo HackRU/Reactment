@@ -16,6 +16,7 @@ import GetName from "../GetName";
 import RandomColorButton from "../RandomColorButton";
 import MoviePage from "../MoviePage";
 import Pokesearch from "../Pokesearch";
+import News from "../News";
 
 const Home = (props) => {
   return (
@@ -70,6 +71,7 @@ const Home = (props) => {
         <Mando />
         <PartyParrot />
         <ElonMusk />
+        <News />
       </div>
     </div>
   );
