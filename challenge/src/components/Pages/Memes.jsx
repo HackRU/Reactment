@@ -11,14 +11,40 @@ import meme8 from "../Memes/8.png"
 import meme9 from "../Memes/9.png"
 import meme10 from "../Memes/10.png"
 import "../memesStyles.css";
+
 const Memes = (props) => {
 	const page = props.currentpage;
+
+	// list of funny video links. reload the page for a new random video
+	const links = [
+		'https://www.youtube.com/embed/fWNVLO8HRf0?si=hE6LfGidtKP9IVW6',
+		'https://www.youtube.com/embed/tYX6mVp0jmw?si=yXRCKboFPaJh8BOV',
+		'https://www.youtube.com/embed/2dcyby6vH9s?si=WEOatLtjLIVlvnox',
+		'https://www.youtube.com/embed/4MPPeSaGTDc?si=kJ6b6Ulrwwn6c4bm',
+		'https://www.youtube.com/embed/w6vVS6v58II?si=oUPr96VQCx0oc4S_',
+		'https://www.youtube.com/embed/bVIMEBU_jgI?si=INkGBNgHt3Vbk9Vs'
+	];
+	const randomLink = links[Math.floor(Math.random() * links.length)];
+
 	return (
 		<div>
 			<div>
 				<h1 style={{ fontSize: 100, color: "#FFC436" }}>
 					<center>Memes</center>
 				</h1>
+				<div class="video">
+					<iframe 
+						width="560" 
+						height="315" 
+						src={`${randomLink}`}
+						title="Sana's Embedded Video" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						referrerpolicy="strict-origin-when-cross-origin" 
+						allowfullscreen="true"
+					>
+					</iframe>
+				</div>
 				<div class="grid-container">
 					<div class="meme">
 						<MemeImage

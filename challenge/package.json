@@ -47,6 +47,7 @@
         ]
     },
     "devDependencies": {
+        "ajv": "^7.2.4",
         "dotenv": "^16.4.5"
     }
 }
