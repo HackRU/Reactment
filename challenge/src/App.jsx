@@ -84,24 +84,28 @@ class App extends Component {
   }
 
   render() {
-    console.log("User has selected page ", this.state.currentPageName);
-
-  
     const backgroundStyle = {
-      background: 'linear-gradient(90deg, #FFD700, #FF69B4, #8A2BE2)', // Horizontal Yellowish-Pinkish-Darkish Gradient
+      background: 'linear-gradient(90deg, #FFD700, #FF69B4, #8A2BE2)', 
       backgroundSize: '200% 200%',
       animation: 'gradientAnimation 10s ease infinite',
       minHeight: '100vh',
       padding: '20px',
       color: '#000',
     };
-    
-    
-
 
     return (
       <MuiThemeProvider theme={theme}>
         <div style={backgroundStyle}>
+          {/* Keyframe definition for gradient animation */}
+          <style>
+            {`
+              @keyframes gradientAnimation {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+              }
+            `}
+          </style>
           <Navbar
             fixed={true}
             items={["Home", "Sponsors", "About", "Contact us", "Fun Facts", "Memes"]}
