@@ -49,4 +49,11 @@
     text-decoration: none;
     cursor: pointer;
   }
-  
+
+  .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 100px 0;
+  }
