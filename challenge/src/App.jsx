@@ -6,10 +6,11 @@ import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import FunFacts from "./components/Pages/FunFacts";
 import Memes from "./components/Pages/Memes";
-import Profile from "./components/Pages/profile"
+import Profile from "./components/Pages/profile";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import green from "@material-ui/core/colors/green";
 import yellow from "@material-ui/core/colors/yellow";
+
 const theme = createMuiTheme({
   palette: {
     primary: green,
@@ -76,35 +77,42 @@ class App extends Component {
       case "memes":
         return <Memes currentpage={param.PageRoute} />;
       case "person":
-          return <Profile name={window.location.href.split("/")[4]} />
+        return <Profile name={window.location.href.split("/")[4]} />;
       default:
-        return <div>An error occured.</div>;
+        return <div>An error occurred.</div>;
     }
   }
 
   render() {
     console.log("User has selected page ", this.state.currentPageName);
-    //console.log("Render Method is Working. Redered successfully! I think?")
+
+  
+    const backgroundStyle = {
+      background: 'linear-gradient(90deg, #FFD700, #FF69B4, #8A2BE2)', // Horizontal Yellowish-Pinkish-Darkish Gradient
+      backgroundSize: '200% 200%',
+      animation: 'gradientAnimation 10s ease infinite',
+      minHeight: '100vh',
+      padding: '20px',
+      color: '#000',
+    };
+    
+    
+
 
     return (
       <MuiThemeProvider theme={theme}>
-        <Navbar
-          fixed={true}
-          items={[
-            "Home",
-            "Sponsors",
-            "About",
-            "Contact us",
-            "Fun Facts",
-            "Memes",
-          ]}
-          onPageChange={this.handlePageChange}
-          currentPage={this.state.currentPage}
-        />
-        <this.Router
-          PageRoute={this.state.currentPage}
-          PageName={this.state.currentPageName}
-        />
+        <div style={backgroundStyle}>
+          <Navbar
+            fixed={true}
+            items={["Home", "Sponsors", "About", "Contact us", "Fun Facts", "Memes"]}
+            onPageChange={this.handlePageChange}
+            currentPage={this.state.currentPage}
+          />
+          <this.Router
+            PageRoute={this.state.currentPage}
+            PageName={this.state.currentPageName}
+          />
+        </div>
       </MuiThemeProvider>
     );
   }
