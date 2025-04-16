@@ -1,0 +1,24 @@
+
+.headlinesDiv {
+    text-align: center;
+
+}
+.mainHeading {
+    font-family: Georgia, serif;
+}
+.articlesList {
+    display: inline-flex;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+
+}
+.articlesList li:hover {
+    transform: scale(1.02);
+    background-color: #f3ade5c2;
+}
+
+.dates {
+    font-size:10px;
+}
