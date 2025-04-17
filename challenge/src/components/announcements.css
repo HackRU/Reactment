@@ -1,0 +1,115 @@
+.status {
+  padding: 16px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.status.error {
+  color: #dc2626;
+}
+
+.announcements-bar {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.announcements-container {
+  width: 500px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.announcements-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.announcements-icon {
+  width: 40px;
+  height: 40px;
+  color: #000000;
+}
+
+.announcements-temp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.announcements-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.unit-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 0.875rem;
+}
+.unit-button {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.unit-button.selected {
+  text-decoration: underline;
+  color: #111827;
+}
+
+.separator {
+  color: #9ca3af;
+}
+
+.stats {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.announcements-right {
+  text-align: right;
+}
+
+.weather-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.weather-time {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.weather-desc {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: capitalize;
+}
+
+.meditation-banner {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  width: 500px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin: 0 auto;
+}
